@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>List Product</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <div class="row">
+        <!-- Small table -->
+        <div class="col-md-12 my-4">
+            <h1 class="page-title text-start">Stock Product</h1>
+            <p class="mb-3">
+                Check Product Kamu Apakah Aman?
+            </p>
+            <section th:switch="${products}">
+                <section th:case="null">
+                    <div class="wrapper vh-100">
+                        <div class="align-items-center h-75 d-flex w-50 mx-auto">
+                            <div class="mx-auto text-center">
+                                <h1 class="display-1 m-0 font-weight-bolder text-muted" style="font-size:80px;">&#x1F343;</h1>
+                                <h1 class="mb-1 text-muted font-weight-bold">Oops! Belum ada product</h1>
+                                <h6 class="mb-3 text-muted">Yuk tambahin produk kamu <a th:href="@{/dashboard/product/add}">disini</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section th:case="*">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="toolbar">
+                                <form class="form" th:action="@{/dashboard/product/search}" method="GET">
+                                    <div class="form-group col-auto">
+                                        <label for="nama" class="sr-only">Search</label>
+                                        <input type="text" class="form-control" id="nama" th:name="nama" placeholder="Search"/>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- table -->
+                            <table class="table table-borderless table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Location</th>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th>Wishlist</th>
+                                    <th>Cart</th>
+                                    <th>Bought</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="product : ${products}">
+                                    <td>
+                                        <div class="avatar avatar-md">
+                                            <img th:src="@{{imageUrl}(imageUrl=${product.imageProduct})}" alt="..." class="avatar-img"/>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted">
+                                            <strong th:text="${#strings.abbreviate(product.productName, 10 )}"></strong>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted">
+                                            <strong th:if="${product.published != false}">
+                                                Published
+                                            </strong>
+                                            <strong th:unless="${product.published != false}">
+                                                Unpublished
+                                            </strong>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted" th:text="${product.category}"></p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted" th:text="${product.description}"></p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted" th:text="${product.location}"></p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 text-muted" th:text="${product.stock}"></p>
+                                    </td>
+                                    <td>
+                                        <small class="text-muted">Rp. <span th:text="${product.price}"></span></small>
+                                    </td>
+                                    <td>
+                                        <small class="text-muted"><span th:text="${product.wishlistByUser}"></span></small>
+                                    </td>
+                                    <td>
+                                        <small class="text-muted"><span th:text="${product.cartByUser}"></span></small>
+                                    </td>
+                                    <td>
+                                        <small class="text-muted"><span th:text="${product.totalBuyer}"></span></small>
+                                    </td>
+                                    <td>
+                                        <button
+                                                class="btn btn-sm dropdown-toggle more-horizontal"
+                                                type="button"
+                                                data-toggle="dropdown"
+                                                aria-haspopup="true"
+                                                aria-expanded="false"
+                                        >
+                                            <span class="text-muted sr-only">Action</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" th:href="@{/dashboard/product/{id}/delete(id=${product.id})}">Remove</a>
+                                            <a class="dropdown-item" th:href="@{/dashboard/product/{id}/publish(id=${product.id})}">Publish</a>
+                                            <a class="dropdown-item" th:href="@{/dashboard/product/{id}/archive(id=${product.id})}">Archive</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="Table Paging" class="mb-0 text-muted">
+                                <ul class="pagination justify-content-center mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" th:href="@{'/dashboard/product/stock/' +${currentPage - 1}}" th:if="${currentPage != 1}">Previous</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <span class="page-link disabled" th:unless="${currentPage != 1}">Previous</span>
+                                    </li>
+                                    <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+                                        <li class="page-item"><a class="page-link" th:href="@{'/dashboard/product/stock/' + ${i}}" th:if="${currentPage != i}">[[${i}]]</a></li>
+                                        <li class="page-item"><span class="page-link disabled bg-info-darker" th:unless="${currentPage != i}">[[${i}]]</span></li>
+                                    </span>
+                                    <li class="page-item">
+                                        <a class="page-link" th:href="@{'/dashboard/product/stock/' + ${currentPage + 1}}" th:if="${currentPage < totalPages}">Next</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <span class="page-link disabled bg-info-darker" th:unless="${currentPage < totalPages}">Next</span>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" th:href="@{'/dashboard/product/stock/' + ${totalPages}}" th:if="${currentPage < totalPages}">Last</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <span class="page-link disabled bg-info-darker" th:unless="${currentPage < totalPages}">Last</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+        <!-- customized table -->
+</div>
+</div>
+</body>
+</html>
