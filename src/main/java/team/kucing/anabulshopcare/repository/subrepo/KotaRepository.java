@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface KotaRepository extends JpaRepository<Kota, String> {
     List<Kota> findByIdStartingWith(String id);
+
+    Kota findByNamaIgnoreCase(String name);
 }

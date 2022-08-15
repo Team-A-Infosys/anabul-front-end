@@ -1,60 +1,10 @@
-2022-08-11 09:38:11,085 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 12580 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:38:11,089 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:38:11,091 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:38:15,264 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:38:16,237 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.63 seconds (JVM running for 6.574)
-2022-08-11 09:38:28,731 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
-2022-08-11 09:40:57,543 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 14900 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:40:57,544 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:40:57,546 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:41:02,172 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:41:03,017 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.915 seconds (JVM running for 7.65)
-2022-08-11 09:41:30,283 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 13564 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:41:30,284 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:41:30,285 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:41:34,229 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:41:35,039 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.133 seconds (JVM running for 5.984)
-2022-08-11 09:41:35,272 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:43:27,240 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15128 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:43:27,242 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:43:27,242 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:43:31,250 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:43:32,037 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.29 seconds (JVM running for 6.624)
-2022-08-11 09:43:39,992 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:44:19,028 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 7388 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:44:19,030 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:44:19,031 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:44:23,181 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:44:23,949 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.32 seconds (JVM running for 5.997)
-2022-08-11 09:44:25,089 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:44:39,203 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 21456 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:44:39,205 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:44:39,206 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:44:42,996 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:44:43,846 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.124 seconds (JVM running for 5.854)
-2022-08-11 09:44:58,450 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:45:25,066 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 17532 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:45:25,069 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:45:25,070 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:45:31,276 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:45:32,380 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 7.947 seconds (JVM running for 8.77)
-2022-08-11 09:45:33,618 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:45:53,877 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 8888 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:45:53,878 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:45:53,879 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:45:57,737 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:45:58,647 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.194 seconds (JVM running for 5.958)
-2022-08-11 09:46:00,036 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:48:16,865 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 2264 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:48:16,866 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:48:16,867 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:48:20,604 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:48:21,422 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.986 seconds (JVM running for 5.708)
-2022-08-11 09:48:23,110 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:54:51,183 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15036 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
-2022-08-11 09:54:51,186 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-11 09:54:51,186 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-08-11 09:54:54,638 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-11 09:54:55,406 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.57 seconds (JVM running for 5.247)
-2022-08-11 09:54:59,465 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
-2022-08-11 09:55:06,639 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-15 09:14:06,948 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 14208 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-15 09:14:06,950 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 09:14:06,950 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-15 09:14:10,655 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-15 09:14:11,483 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.874 seconds (JVM running for 5.563)
+2022-08-15 09:14:40,610 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-15 09:15:49,584 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success create user: UserResponse(firstName=User, lastName=Baru Buat, email=user123@gmail.com, phoneNumber=123123124342, address=DAERAH ISTIMEWA YOGYAKARTA, KOTA YOGYAKARTA, Umbulharjo, Sorosutan, history=[], wishlistProduct=[], cartList=[], roles=[Role(id=1, name=ROLE_SELLER)])
+2022-08-15 09:15:49,588 INFO team.kucing.anabulshopcare.resources.controller.signup.SignupSeller [http-nio-8081-exec-2] Success Register User Seller user123@gmail.com
+2022-08-15 09:15:49,603 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-15 09:16:11,297 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products

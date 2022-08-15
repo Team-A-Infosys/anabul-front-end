@@ -71,6 +71,21 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
+    public List<Kota> getAllKota() {
+        return this.kotaRepository.findAll();
+    }
+
+    @Override
+    public List<Kecamatan> getAllKecamtaan() {
+        return this.kecamatanRepository.findAll();
+    }
+
+    @Override
+    public List<Kelurahan> getAllKelurahan() {
+        return this.kelurahanRepository.findAll();
+    }
+
+    @Override
     public List<Kota> getKota(String id) {
         return this.kotaRepository.findByIdStartingWith(id);
     }

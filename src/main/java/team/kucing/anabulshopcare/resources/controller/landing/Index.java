@@ -7,9 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import team.kucing.anabulshopcare.entity.Product;
 import team.kucing.anabulshopcare.service.ProductService;
 
+import java.util.Objects;
 import java.util.UUID;
 
 @Controller
@@ -48,7 +50,7 @@ public class Index {
 
     @GetMapping("/product/{page}")
     public String listProducts(Model model, @PathVariable("page") int page){
-        int size = 20;
+        int size = 10;
 
         Page<Product> listProducts = this.productService.listProducts(page, size);
         if (listProducts.getTotalElements() == 0){
@@ -58,6 +60,28 @@ public class Index {
 
         model.addAttribute("products", listProducts.getContent().stream().map(Product::convertToResponse).toList());
         model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", listProducts.getTotalPages());
+        model.addAttribute("totalProduct", listProducts.getTotalElements());
+        return "index/product";
+    }
+
+    @GetMapping("/product/search")
+    public String searchProductName(Model model, @RequestParam(value = "nama", required = false) String nama){
+        int size = 10;
+
+        Page<Product> listProducts = this.productService.filterProductByName(nama, 1, size);
+        if (listProducts.getTotalElements() == 0){
+            model.addAttribute("products", null);
+            return "index/product";
+        }
+
+        if (Objects.equals(nama, "")){
+            return "redirect:/product";
+        }
+
+        model.addAttribute("nama", nama);
+        model.addAttribute("products", listProducts.getContent().stream().map(Product::convertToResponse).toList());
+        model.addAttribute("currentPage", 1);
         model.addAttribute("totalPages", listProducts.getTotalPages());
         model.addAttribute("totalProduct", listProducts.getTotalElements());
         return "index/product";

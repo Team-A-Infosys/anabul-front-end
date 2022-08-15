@@ -48,7 +48,7 @@ public class UserController {
         return ResponseHandler.generateResponse("Success get user", HttpStatus.OK, response);
     }
 
-    @PostMapping(value = "/signup/seller", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PostMapping(value = "/signup/seller/success", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> signupSeller(@RequestPart MultipartFile file, @RequestPart SignupRequest userApp){
         UserResponse response = this.userAppService.signUpSeller(userApp, file);
         return ResponseHandler.generateResponse("Success Create User", HttpStatus.CREATED, response);

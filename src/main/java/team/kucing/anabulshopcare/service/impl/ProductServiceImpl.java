@@ -62,7 +62,7 @@ public class ProductServiceImpl implements ProductService {
         String fileName = imageProductService.storeFile(file);
 
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path(fileName)
+                .path("/images-prod/" + fileName)
                 .toUriString();
 
         Optional<Category> category = this.categoryRepository.findByCategoryName(productRequest.getCategory().getName());

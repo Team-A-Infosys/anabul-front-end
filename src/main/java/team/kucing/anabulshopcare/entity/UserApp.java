@@ -44,7 +44,7 @@ public class UserApp extends ImageProduct {
 
     private String password;
 
-    @ManyToMany(fetch = EAGER, cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = EAGER)
     private Collection<Role> roles = new ArrayList<>();
 
     @OneToMany

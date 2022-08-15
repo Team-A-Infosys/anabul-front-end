@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface ProvinsiRepository extends JpaRepository<Provinsi, String> {
     Optional<Provinsi> findById (String id);
 
+    Provinsi findByNamaIgnoreCase (String name);
+
 }

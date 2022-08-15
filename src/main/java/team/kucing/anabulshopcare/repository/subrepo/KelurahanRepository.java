@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface KelurahanRepository extends JpaRepository<Kelurahan, String> {
     List<Kelurahan> findByIdStartingWith(String id);
+
+    Kelurahan findByNamaIgnoreCase(String name);
 }

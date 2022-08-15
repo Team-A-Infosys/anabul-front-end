@@ -17,6 +17,12 @@ public interface AddressService {
 
     List<Provinsi> getAllProvinsi();
 
+    List<Kota> getAllKota();
+
+    List<Kecamatan> getAllKecamtaan();
+
+    List<Kelurahan> getAllKelurahan();
+
     List<Kota> getKota(String id);
 
     List<Kecamatan> getKecamatan(String id);

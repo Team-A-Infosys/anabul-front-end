@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -18,6 +18,7 @@ import team.kucing.anabulshopcare.dto.response.UserResponse;
 import team.kucing.anabulshopcare.entity.Address;
 import team.kucing.anabulshopcare.entity.Role;
 import team.kucing.anabulshopcare.entity.UserApp;
+import team.kucing.anabulshopcare.entity.UserAppDetails;
 import team.kucing.anabulshopcare.entity.subaddress.*;
 import team.kucing.anabulshopcare.exception.BadRequestException;
 import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
@@ -35,8 +36,9 @@ import java.util.*;
 @AllArgsConstructor
 @Transactional
 @Slf4j
-public class UserAppServiceImpl implements UserAppService {
+public class UserAppServiceImpl implements UserAppService{
 
+    private PasswordEncoder passwordEncoder;
     private UserAppRepository userRepo;
 
     private AddressRepository addressRepository;
@@ -53,11 +55,13 @@ public class UserAppServiceImpl implements UserAppService {
 
     private final UserAvatarService fileStorageService;
 
+
+
     @Override
     public UserResponse signUpSeller(SignupRequest newUser, MultipartFile file) {
 
         String fileName = fileStorageService.storeFile(file);
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path(fileName).toUriString();
+        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images-ava/" + fileName).toUriString();
         Role getRole = this.roleRepo.findByName("ROLE_SELLER");
 
         return saveUser(newUser, fileDownloadUri, getRole);
@@ -66,7 +70,7 @@ public class UserAppServiceImpl implements UserAppService {
     @Override
     public UserResponse signUpBuyer(SignupRequest newUser, MultipartFile file) {
         String fileName = fileStorageService.storeFile(file);
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path(fileName).toUriString();
+        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images-ava/" + fileName).toUriString();
         Role getRole = this.roleRepo.findByName("ROLE_BUYER");
 
         return saveUser(newUser, fileDownloadUri, getRole);
@@ -109,7 +113,7 @@ public class UserAppServiceImpl implements UserAppService {
         if (!Objects.equals(request.getPassword(), request.getConfirmPassword())){
             throw new BadRequestException("Password is not match, try again");
         }
-        newUser.setPassword(request.getPassword());
+        newUser.setPassword(passwordEncoder.encode(request.getPassword()));
 
         if (this.userRepo.existsByEmail(request.getEmail())){
             log.error("Email already registered, try login. Error: " + HttpStatus.BAD_REQUEST);
@@ -124,9 +128,12 @@ public class UserAppServiceImpl implements UserAppService {
         newUser.setPhoneNumber(request.getPhoneNumber());
         this.userRepo.save(newUser);
 
-        if (newUser.getAddress() == null){
+//        Provinsi provinsi = this.provinsiRepository.findByNameIgnoreCase(request.getProvinsi());
+//        Kota kota = this.kotaRepository.findByNameIgnoreCase(request.getKota());
+//        Kelurahan kelurahan = this.kelurahanRepository.findByNameIgnoreCase(request.getKelurahan());
+//        Kecamatan kecamatan = this.kecamatanRepository.findByNameIgnoreCase(request.getKecamatan());
+
             Address newAddress = new Address();
-            newAddress.setId(1L);
             newAddress.setProvinsi(request.getAddress().getProvinsi());
             newAddress.setKota(request.getAddress().getKota());
             newAddress.setKecamatan(request.getAddress().getKecamatan());
@@ -139,7 +146,7 @@ public class UserAppServiceImpl implements UserAppService {
             UserApp searchUser = this.userRepo.findByEmail(request.getEmail());
             searchUser.getAddress().setUserApp(savedUser);
             this.userRepo.save(searchUser);
-        }
+
 
         UserResponse response = newUser.convertToResponse();
         log.info("Success create user: " + response.toString());

@@ -28,8 +28,8 @@
             Cat Supplement
           </button>
 
-          <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".cat-toy">
-            Cat Toy
+          <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".cat-toys">
+            Cat Toys
           </button>
 
           <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".cat-fashion">
@@ -52,15 +52,17 @@
         </div>
 
         <!-- Search product -->
+        <form th:action="@{/product/search}" method="GET">
         <div class="dis-none panel-search w-full p-t-10 p-b-15">
           <div class="bor8 dis-flex p-l-15">
             <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
               <i class="zmdi zmdi-search"></i>
             </button>
 
-            <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
+            <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" th:name="nama" placeholder="Search">
           </div>
         </div>
+        </form>
 
         <!-- Filter -->
         <div class="dis-none panel-filter w-full p-t-10">
@@ -277,10 +279,9 @@
                   </div>
 
                   <div class="block2-txt-child2 flex-r p-t-3">
-                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                      <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
-                    </a>
+                    <a th:href="@{/product-detail/{id}(id=${product.id})}" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                      <img class="icon-heart1 dis-block trans-04" th:src="@{/images/icon-heart-01.png}" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" th:src="@{/images/icon-heart-02.png}" alt="ICON"></a>
                   </div>
                 </div>
               </div>
@@ -294,7 +295,7 @@
                 <div class="block2-pic hov-img0">
                   <img th:src="@{{imageUrl}(imageUrl=${product.imageProduct})}" alt="IMG-PRODUCT">
 
-                  <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatgrooms">
+                  <a th:href="@{/product-detail/{id}(id=${product.id})}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatgrooms">
                     Quick View
                   </a>
                 </div>
@@ -310,9 +311,9 @@
                   </div>
 
                   <div class="block2-txt-child2 flex-r p-t-3">
-                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                      <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                    <a th:href="@{/product-detail/{id}(id=${product.id})}" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                      <img class="icon-heart1 dis-block trans-04" th:src="@{/images/icon-heart-01.png}" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" th:src="@{/images/icon-heart-02.png}" alt="ICON">
                     </a>
                   </div>
                 </div>
@@ -327,7 +328,7 @@
                 <div class="block2-pic hov-img0">
                   <img th:src="@{{imageUrl}(imageUrl=${product.imageProduct})}" alt="IMG-PRODUCT">
 
-                  <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatfashion">
+                  <a th:href="@{/product-detail/{id}(id=${product.id})}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatfashion">
                     Quick View
                   </a>
                 </div>
@@ -344,8 +345,8 @@
 
                   <div class="block2-txt-child2 flex-r p-t-3">
                     <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                      <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                      <img class="icon-heart1 dis-block trans-04" th:src="@{/images/icon-heart-01.png}" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" th:src="@{/images/icon-heart-02.png}" alt="ICON">
                     </a>
                   </div>
                 </div>
@@ -359,7 +360,7 @@
                 <div class="block2-pic hov-img0">
                   <img th:src="@{{imageUrl}(imageUrl=${product.imageProduct})}" alt="IMG-PRODUCT">
 
-                  <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatsupplement">
+                  <a th:href="@{/product-detail/{id}(id=${product.id})}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcatsupplement">
                     Quick View
                   </a>
                 </div>
@@ -375,23 +376,23 @@
                   </div>
 
                   <div class="block2-txt-child2 flex-r p-t-3">
-                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                      <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                    <a th:href="@{/product-detail/{id}(id=${product.id})}" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                      <img class="icon-heart1 dis-block trans-04" th:src="@{/images/icon-heart-01.png}" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" th:src="@{/images/icon-heart-02.png}" alt="ICON">
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div th:if="${product.category == 'cat-toy'}">
-            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item cat-toy">
+          <div th:if="${product.category == 'cat-toys'}">
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item cat-toys">
               <!-- Block2 -->
               <div class="block2">
                 <div class="block2-pic hov-img0">
                   <img th:src="@{{imageUrl}(imageUrl=${product.imageProduct})}" alt="IMG-PRODUCT">
 
-                  <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcattoy">
+                  <a th:href="@{/product-detail/{id}(id=${product.id})}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modalcattoy">
                     Quick View
                   </a>
                 </div>
@@ -407,9 +408,9 @@
                   </div>
 
                   <div class="block2-txt-child2 flex-r p-t-3">
-                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                      <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                    <a th:href="@{/product-detail/{id}(id=${product.id})}" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                      <img class="icon-heart1 dis-block trans-04" th:src="@{/images/icon-heart-01.png}" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" th:src="@{/images/icon-heart-02.png}" alt="ICON">
                     </a>
                   </div>
                 </div>
@@ -424,9 +425,32 @@
 
       <!-- Load more -->
       <div class="flex-c-m flex-w w-full p-t-45">
-        <a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-          Load More
-        </a>
+        <nav aria-label="Table Paging" class="mb-0 text-muted">
+          <ul class="pagination justify-content-center mb-0">
+            <li class="page-item">
+              <a class="page-link" th:href="@{'/product/' +${currentPage - 1}}" th:if="${currentPage != 1}">Previous</a>
+            </li>
+            <li class="page-item">
+              <span class="page-link disabled" th:unless="${currentPage != 1}">Previous</span>
+            </li>
+            <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+                                        <li class="page-item"><a class="page-link" th:href="@{'/product/' + ${i}}" th:if="${currentPage != i}">[[${i}]]</a></li>
+                                        <li class="page-item"><span class="page-link disabled bg-info-darker" th:unless="${currentPage != i}">[[${i}]]</span></li>
+                                    </span>
+            <li class="page-item">
+              <a class="page-link" th:href="@{'/product/' + ${currentPage + 1}}" th:if="${currentPage < totalPages}">Next</a>
+            </li>
+            <li class="page-item">
+              <span class="page-link disabled bg-info-darker" th:unless="${currentPage < totalPages}">Next</span>
+            </li>
+            <li class="page-item">
+              <a class="page-link" th:href="@{'/product/' + ${totalPages}}" th:if="${currentPage < totalPages}">Last</a>
+            </li>
+            <li class="page-item">
+              <span class="page-link disabled bg-info-darker" th:unless="${currentPage < totalPages}">Last</span>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
