@@ -34,10 +34,10 @@ public class WishlistServiceImpl implements WishlistService {
     private final ProductRepository productRepository;
 
     @Override
-    public WishlistResponse createWishlist(WishlistRequest wishlistRequest) {
-        Optional<Product> product = this.productRepository.findById(wishlistRequest.getProductId());
+    public WishlistResponse createWishlist(UUID productId, String email) {
+        Optional<Product> product = this.productRepository.findById(productId);
 
-        UserApp userApp = this.userAppRepository.findByEmail(wishlistRequest.getEmailUser());
+        UserApp userApp = this.userAppRepository.findByEmail(email);
 
         if(product.isEmpty()){
             throw new ResourceNotFoundException("Product is not found");

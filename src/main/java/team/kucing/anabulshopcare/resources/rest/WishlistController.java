@@ -18,12 +18,12 @@ import team.kucing.anabulshopcare.service.WishlistService;
 public class WishlistController {
     private final WishlistService wishlistService;
 
-    @PostMapping("/wishlist/add")
-    public ResponseEntity<Object> addWishlist(@RequestBody WishlistRequest wishlistRequest){
-        WishlistResponse response = this.wishlistService.createWishlist(wishlistRequest);
-        log.info("New Item Added To Wishlist");
-        return ResponseHandler.generateResponse("Success add product to wishlist", HttpStatus.OK, response);
-    }
+//    @PostMapping("/wishlist/add")
+//    public ResponseEntity<Object> addWishlist(@RequestBody WishlistRequest wishlistRequest){
+//        WishlistResponse response = this.wishlistService.createWishlist(wishlistRequest);
+//        log.info("New Item Added To Wishlist");
+//        return ResponseHandler.generateResponse("Success add product to wishlist", HttpStatus.OK, response);
+//    }
 
     @DeleteMapping("/wishlist/{id}/delete")
     public ResponseEntity<Object> deleteWishlist(@PathVariable(value = "id") Long id){

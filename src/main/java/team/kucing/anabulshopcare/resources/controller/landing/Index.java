@@ -3,14 +3,22 @@ package team.kucing.anabulshopcare.resources.controller.landing;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+import team.kucing.anabulshopcare.dto.request.CartRequest;
+import team.kucing.anabulshopcare.dto.request.WishlistRequest;
 import team.kucing.anabulshopcare.entity.Product;
+import team.kucing.anabulshopcare.entity.UserAppDetails;
+import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
+import team.kucing.anabulshopcare.service.CartService;
 import team.kucing.anabulshopcare.service.ProductService;
+import team.kucing.anabulshopcare.service.UserAppService;
+import team.kucing.anabulshopcare.service.WishlistService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -21,8 +29,19 @@ public class Index {
 
     private ProductService productService;
 
+    private WishlistService wishlistService;
+
+    private UserAppService userAppService;
+
+    private CartService cartService;
+
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @AuthenticationPrincipal UserAppDetails userDetails){
+        if (userDetails == null){
+            model.addAttribute("userApp", null);
+        } else {
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+        }
         return indexListProducts(model, 1);
     }
 
@@ -44,13 +63,19 @@ public class Index {
     }
 
     @GetMapping("/product")
-    public String product(Model model){
-        return listProducts(model, 1);
+    public String product(Model model, @AuthenticationPrincipal UserAppDetails userDetails){
+        return listProducts(model, 1, userDetails);
     }
 
     @GetMapping("/product/{page}")
-    public String listProducts(Model model, @PathVariable("page") int page){
-        int size = 10;
+    public String listProducts(Model model, @PathVariable("page") int page, @AuthenticationPrincipal UserAppDetails userDetails){
+        if (userDetails == null){
+            model.addAttribute("userApp", null);
+        } else {
+            model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+        }
+
+        int size = 5;
 
         Page<Product> listProducts = this.productService.listProducts(page, size);
         if (listProducts.getTotalElements() == 0){
@@ -66,7 +91,13 @@ public class Index {
     }
 
     @GetMapping("/product/search")
-    public String searchProductName(Model model, @RequestParam(value = "nama", required = false) String nama){
+    public String searchProductName(Model model, @RequestParam(value = "nama", required = false) String nama, @AuthenticationPrincipal UserAppDetails userDetails){
+        if (userDetails == null){
+            model.addAttribute("userApp", null);
+        } else {
+            model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+        }
+
         int size = 10;
 
         Page<Product> listProducts = this.productService.filterProductByName(nama, 1, size);
@@ -87,15 +118,48 @@ public class Index {
         return "index/product";
     }
     @GetMapping("/product-detail/{id}")
-    public String getProduct(@PathVariable("id") UUID id, Model model){
+    public String getProduct(@PathVariable("id") UUID id, Model model, @AuthenticationPrincipal UserAppDetails userDetails){
+        if (userDetails == null){
+            model.addAttribute("userApp", null);
+        } else {
+            model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+        }
+
         model.addAttribute("product", this.productService.getProduct(id));
 
         return "index/product-detail";
     }
 
+    @GetMapping("/add-wishlist/{id}")
+    public String addWishlist(@PathVariable("id") UUID id,@AuthenticationPrincipal UserAppDetails userDetails){
+
+        String email = userDetails.getUsername();
+
+        this.wishlistService.createWishlist(id, email);
+
+        return "redirect:/product-detail/{id}";
+    }
+
+    @GetMapping("/profile")
+    public String userProfile(@AuthenticationPrincipal UserAppDetails userDetails, Model model){
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+
+        return "profile/user";
+    }
+
     @GetMapping("/shopping-cart")
     public String shoppingCart(){
         return "index/shopping-cart";
+    }
+
+    @PostMapping("/add-cart")
+    public String addWishlist(@ModelAttribute("cart")CartRequest cartRequest, @AuthenticationPrincipal UserAppDetails userDetails){
+        String email = userDetails.getUsername();
+        cartRequest.setEmailUser(email);
+
+        this.cartService.createCart(cartRequest);
+
+        return "redirect:/product";
     }
 
 }

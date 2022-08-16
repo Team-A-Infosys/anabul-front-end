@@ -2,6 +2,8 @@ package team.kucing.anabulshopcare.dto.response;
 
 import lombok.*;
 
+import java.util.UUID;
+
 @Setter
 @Getter
 @ToString
@@ -9,8 +11,11 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class WishlistResponse {
+    private UUID productId;
 
     private String productName;
+
+    private String imageUrl;
 
     private CategoryResponse category;
 

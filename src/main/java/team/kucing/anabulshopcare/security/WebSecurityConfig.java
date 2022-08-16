@@ -43,9 +43,12 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeRequests().antMatchers("/","/provinsi.json", "/kota/**","/kecamatan/**","/kelurahan/**","/product/**", "/product-detail/**", "/signup/seller/**","/images-ava/**","/images-prod/**", "/images/**", "/js/**", "/css/**", "/fonts/**").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ROLE_SELLER")
+                .antMatchers("/add-wishlist/{id}").hasAuthority("ROLE_BUYER")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().permitAll();
+                .formLogin()
+                .loginPage("/login")
+                .usernameParameter("email").permitAll();
 
         return http.build();
     }

@@ -106,14 +106,14 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<Product> filterProductByName(String name, int page, int size) {
         Pageable pageable = PageRequest.of(page - 1, size);
-        Page<Product> getProduct = this.productRepository.findByNameContaining(name, pageable);
+        Page<Product> getProduct = this.productRepository.findByNameContainingIgnoreCase(name, pageable);
 
         log.info("Success search product by name: " + name);
         return getProduct;
     }
     @Override
         public List<ProductResponse> filterProductsByLocation(String location, Pageable pageable) {
-        Page<Product> getProduct = this.productRepository.findByLocation(location, pageable);
+        Page<Product> getProduct = this.productRepository.findByLocationIgnoreCase(location, pageable);
 
         List<ProductResponse> response = getProduct.stream().map(Product::convertToResponse).toList();
 

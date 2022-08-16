@@ -43,7 +43,9 @@ public class Wishlist {
 
     public WishlistResponse convertToResponse(){
         return WishlistResponse.builder()
+                .productId(this.product.getId())
                 .productName(this.product.getName())
+                .imageUrl(this.product.getImageUrl())
                 .description(this.product.getDescription())
                 .category(this.product.getCategory().convertResponseCategory())
                 .location(this.product.getLocation())

@@ -203,6 +203,17 @@
     });
 
     /*==================================================================
+    /*==================================================================
+    [ Wishlist ]*/
+    $('.js-show-cart1').on('click',function(){
+        $('.js-panel-cart1').addClass('show-header-cart1');
+    });
+
+    $('.js-hide-cart1').on('click',function(){
+        $('.js-panel-cart1').removeClass('show-header-cart1');
+    });
+
+    /*==================================================================
     [ Cart ]*/
     $('.js-show-sidebar').on('click',function(){
         $('.js-sidebar').addClass('show-sidebar');

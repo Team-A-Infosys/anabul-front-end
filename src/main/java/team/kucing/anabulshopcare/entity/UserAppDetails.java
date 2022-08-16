@@ -56,4 +56,8 @@ public class UserAppDetails implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public String getFullname(){
+        return this.userApp.getFirstName() + " " + this.userApp.getLastName();
+    }
 }

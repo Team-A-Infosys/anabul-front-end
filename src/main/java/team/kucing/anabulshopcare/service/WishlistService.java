@@ -9,7 +9,7 @@ import team.kucing.anabulshopcare.entity.UserApp;
 import java.util.UUID;
 
 public interface WishlistService {
-    WishlistResponse createWishlist(WishlistRequest wishlistRequest);
+    WishlistResponse createWishlist(UUID productId, String email);
 
     void deleteWishlist(Long Id);
 

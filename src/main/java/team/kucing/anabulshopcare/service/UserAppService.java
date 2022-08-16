@@ -24,6 +24,8 @@ public interface UserAppService {
 
     UserResponse getUser(UUID id);
 
+    UserResponse getUserByEmail(String email);
+
     UserResponse updateUser(UpdateUserRequest user, MultipartFile file, UUID id);
 
     UserResponse updatePasswordUser(PasswordRequest passwordRequest, UUID id);

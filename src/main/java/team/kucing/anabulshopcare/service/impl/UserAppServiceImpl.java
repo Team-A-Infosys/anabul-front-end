@@ -13,22 +13,18 @@ import team.kucing.anabulshopcare.dto.request.AddressRequest;
 import team.kucing.anabulshopcare.dto.request.PasswordRequest;
 import team.kucing.anabulshopcare.dto.request.SignupRequest;
 import team.kucing.anabulshopcare.dto.request.UpdateUserRequest;
-import team.kucing.anabulshopcare.dto.response.BuyerResponse;
 import team.kucing.anabulshopcare.dto.response.UserResponse;
 import team.kucing.anabulshopcare.entity.Address;
 import team.kucing.anabulshopcare.entity.Role;
 import team.kucing.anabulshopcare.entity.UserApp;
-import team.kucing.anabulshopcare.entity.UserAppDetails;
 import team.kucing.anabulshopcare.entity.subaddress.*;
 import team.kucing.anabulshopcare.exception.BadRequestException;
 import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
-import team.kucing.anabulshopcare.handler.ResponseHandler;
 import team.kucing.anabulshopcare.repository.*;
 import team.kucing.anabulshopcare.repository.subrepo.*;
 import team.kucing.anabulshopcare.service.UserAppService;
 import team.kucing.anabulshopcare.service.uploadimg.UserAvatarService;
 
-import javax.swing.text.html.Option;
 import javax.transaction.Transactional;
 import java.util.*;
 
@@ -101,6 +97,17 @@ public class UserAppServiceImpl implements UserAppService{
 
         log.info("Success get user " + getUserApp.getEmail());
         return getUserApp.convertToResponse();
+    }
+
+    @Override
+    public UserResponse getUserByEmail(String email){
+       UserApp userApp = this.userRepo.findByEmail(email);
+        if (userApp == null){
+            throw new ResourceNotFoundException("User is not found");
+        }
+
+        log.info("Success get user " + userApp.getEmail());
+        return userApp.convertToResponse();
     }
 
     private UserResponse saveUser(SignupRequest request, String fileDownloadUri, Role getRole) {
