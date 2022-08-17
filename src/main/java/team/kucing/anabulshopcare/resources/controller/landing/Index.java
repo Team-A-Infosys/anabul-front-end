@@ -172,5 +172,5 @@ public class Index {
 
         return "redirect:/product-detail/{id}";
     }
-
+    
 }
