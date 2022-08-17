@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import team.kucing.anabulshopcare.dto.request.CartRequest;
 import team.kucing.anabulshopcare.dto.request.WishlistRequest;
 import team.kucing.anabulshopcare.entity.Product;
+import team.kucing.anabulshopcare.entity.UserApp;
 import team.kucing.anabulshopcare.entity.UserAppDetails;
+import team.kucing.anabulshopcare.exception.BadRequestException;
 import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
 import team.kucing.anabulshopcare.service.CartService;
 import team.kucing.anabulshopcare.service.ProductService;
@@ -148,18 +150,27 @@ public class Index {
     }
 
     @GetMapping("/shopping-cart")
-    public String shoppingCart(){
+    public String shoppingCart(@AuthenticationPrincipal UserAppDetails userDetails, Model model){
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+
         return "index/shopping-cart";
     }
 
-    @PostMapping("/add-cart")
-    public String addWishlist(@ModelAttribute("cart")CartRequest cartRequest, @AuthenticationPrincipal UserAppDetails userDetails){
+    @GetMapping("/add-cart/{id}")
+    public String addWishlist(@PathVariable("id") UUID id, @RequestParam("quantity") int quantity, @AuthenticationPrincipal UserAppDetails userDetails){
         String email = userDetails.getUsername();
+
+        CartRequest cartRequest = new CartRequest();
+        if (quantity < 1){
+            throw new BadRequestException("Quantity must be greater than 0");
+        }
         cartRequest.setEmailUser(email);
+        cartRequest.setProductId(id);
+        cartRequest.setQuantity(quantity);
 
         this.cartService.createCart(cartRequest);
 
-        return "redirect:/product";
+        return "redirect:/product-detail/{id}";
     }
 
 }

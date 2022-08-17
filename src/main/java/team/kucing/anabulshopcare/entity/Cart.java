@@ -60,6 +60,7 @@ public class Cart {
                 .description(this.product.getDescription())
                 .category(this.product.getCategory().getCategoryName())
                 .quantity(this.quantity)
+                .price(this.product.getPrice())
                 .subTotal(this.subTotal).build();
     }
 }

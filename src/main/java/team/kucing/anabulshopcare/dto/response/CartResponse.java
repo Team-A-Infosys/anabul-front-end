@@ -18,6 +18,8 @@ public class CartResponse {
 
     private String description;
 
+    private double price;
+
     private int quantity;
 
     private double subTotal;
