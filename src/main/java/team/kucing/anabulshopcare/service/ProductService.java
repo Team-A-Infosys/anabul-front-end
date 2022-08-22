@@ -3,12 +3,14 @@ package team.kucing.anabulshopcare.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.multipart.MultipartFile;
 import team.kucing.anabulshopcare.dto.request.ProductRequest;
 import team.kucing.anabulshopcare.dto.request.UpdateProduct;
 import team.kucing.anabulshopcare.dto.response.ProductResponse;
 import team.kucing.anabulshopcare.entity.Product;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,7 +23,11 @@ public interface ProductService {
 
     Product findById(UUID id);
 
+    Page<Product> listMyProduct(int page, int size, Authentication authentication);
+
     Page<Product> filterProductByName(String name, int page, int size);
+
+    Page<Product> filterProductByNameForSeller(String name, int page, int size, String email);
 
     List<ProductResponse> filterProductsByLocation(String location, Pageable pageable);
 

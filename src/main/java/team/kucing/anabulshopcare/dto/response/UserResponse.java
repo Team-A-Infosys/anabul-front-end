@@ -21,6 +21,8 @@ public class UserResponse {
 
     private String lastName;
 
+    private String avatars;
+
     private String email;
 
     private String phoneNumber;

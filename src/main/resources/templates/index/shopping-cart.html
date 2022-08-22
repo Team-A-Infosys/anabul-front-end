@@ -46,21 +46,9 @@
                     </div>
                   </td>
                   <td class="column-2" th:text="${cart.productName}"></td>
-                  <td class="column-3" th:text="${cart.subTotal}"></td>
-                  <td class="column-4">
-                    <div class="wrap-num-product flex-w m-l-auto m-r-0">
-                      <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                        <i class="fs-16 zmdi zmdi-minus"></i>
-                      </div>
-
-                      <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" th:value="${cart.quantity}">
-
-                      <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                        <i class="fs-16 zmdi zmdi-plus"></i>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="column-5">Rp. 66,000</td>
+                  <td class="column-3"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.price,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-4 text-center" th:text="${cart.quantity}"></td>
+                  <td class="column-5"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.subTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
                 </tr>
               </table>
             </div>
@@ -70,12 +58,12 @@
                 <input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
 
                 <div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
-                  Apply coupon
+                  Check coupon
                 </div>
               </div>
 
               <div class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-                Update Cart
+                Proceed Checkout
               </div>
             </div>
           </div>

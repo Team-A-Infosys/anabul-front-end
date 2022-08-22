@@ -69,6 +69,7 @@ public class UserApp extends ImageProduct {
         return UserResponse.builder()
                 .firstName(this.firstName)
                 .lastName(this.lastName)
+                .avatars(this.imageUrl)
                 .email(this.email)
                 .phoneNumber(this.phoneNumber)
                 .address(this.address.getProvinsi().getNama()+", " +

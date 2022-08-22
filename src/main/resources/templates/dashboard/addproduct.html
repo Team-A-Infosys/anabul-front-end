@@ -20,11 +20,11 @@
         <div class="mt-3">
             <img alt="image-product" class="img-fluid" id="prevImg" src="#"/>
         </div>
-        <div class="mt-3">
-            <label class="form-label" for="name">User</label>
-            <input class="form-control" id="userApp" placeholder="Email User" th:field="*{emailUser}" type="text">
-            <div class="alert alert-warning" th:errors="*{emailUser}" th:if="${#fields.hasErrors('emailUser')}"></div>
-        </div>
+<!--        <div class="mt-3">-->
+<!--            <label class="form-label" for="name">User</label>-->
+<!--            <input class="form-control" id="userApp" placeholder="Email User" th:field="*{emailUser}" th:value="${userApp.email}" type="text" hidden>-->
+<!--            <div class="alert alert-warning" th:errors="*{emailUser}" th:if="${#fields.hasErrors('emailUser')}"></div>-->
+<!--        </div>-->
         <div class="mt-3">
             <label class="form-label" for="name">Product Name</label>
             <input class="form-control" id="name" placeholder="Name" th:field="*{productName}" type="text">

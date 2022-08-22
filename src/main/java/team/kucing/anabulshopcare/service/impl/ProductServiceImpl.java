@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,6 +26,7 @@ import team.kucing.anabulshopcare.service.ProductService;
 import team.kucing.anabulshopcare.service.uploadimg.ImageProductService;
 
 import javax.transaction.Transactional;
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -96,7 +98,19 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<Product> listProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page - 1, size);
-        Page<Product> listProducts = this.productRepository.findAll(pageable);
+        Page<Product> listProducts = this.productRepository.findByIsPublished(Boolean.TRUE, pageable);
+
+
+        log.info("Success retrieve all products");
+        return listProducts;
+    }
+
+    @Override
+    public Page<Product> listMyProduct(int page, int size, Authentication authentication) {
+        UserApp userApp = this.userAppRepository.findByEmail(authentication .getName());
+
+        Pageable pageable = PageRequest.of(page - 1, size);
+        Page<Product> listProducts = this.productRepository.findByUserApp(pageable, userApp);
 
 
         log.info("Success retrieve all products");
@@ -106,13 +120,25 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<Product> filterProductByName(String name, int page, int size) {
         Pageable pageable = PageRequest.of(page - 1, size);
-        Page<Product> getProduct = this.productRepository.findByNameContainingIgnoreCase(name, pageable);
+        Page<Product> getProduct = this.productRepository.findByIsPublishedAndNameContainingIgnoreCase(Boolean.TRUE, name, pageable);
 
         log.info("Success search product by name: " + name);
         return getProduct;
     }
+
     @Override
-        public List<ProductResponse> filterProductsByLocation(String location, Pageable pageable) {
+    public Page<Product> filterProductByNameForSeller(String name, int page, int size, String email) {
+        UserApp userApp = this.userAppRepository.findByEmail(email);
+
+        Pageable pageable = PageRequest.of(page - 1, size);
+        Page<Product> getProduct = this.productRepository.findByUserAppAndNameContainingIgnoreCase(userApp, name, pageable);
+
+        log.info("Success search product by name: " + name);
+        return getProduct;
+    }
+
+    @Override
+    public List<ProductResponse> filterProductsByLocation(String location, Pageable pageable) {
         Page<Product> getProduct = this.productRepository.findByLocationIgnoreCase(location, pageable);
 
         List<ProductResponse> response = getProduct.stream().map(Product::convertToResponse).toList();
@@ -263,6 +289,9 @@ public class ProductServiceImpl implements ProductService {
 
         Product archivedProduct = this.productRepository.save(getProduct);
         ProductResponse response = archivedProduct.convertToResponse();
+
+        this.wishlistRepository.deleteByProductId(id);
+        this.cartRepository.deleteByProductId(id);
 
         log.info("Success archived the product with ID: " + id);
         return response;

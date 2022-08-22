@@ -1,0 +1,694 @@
+2022-08-19 10:26:45,032 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 6112 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:26:45,033 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:26:45,036 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:26:48,578 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:26:49,297 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.606 seconds (JVM running for 5.13)
+2022-08-19 10:26:55,479 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:30:53,331 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 19144 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:30:53,332 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:30:53,333 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:30:56,631 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:30:57,359 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.314 seconds (JVM running for 4.882)
+2022-08-19 10:30:59,276 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 10:31:07,339 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 10:31:07,403 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 10:31:40,617 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 8196 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:31:40,619 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:31:40,620 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:31:42,081 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [DFD585F08FF87E6C4B603F206D5D95D9]
+2022-08-19 10:31:43,973 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:31:44,736 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.492 seconds (JVM running for 5.136)
+2022-08-19 10:31:46,713 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:31:47,419 ERROR org.thymeleaf.TemplateEngine [http-nio-8081-exec-1] [THYMELEAF][http-nio-8081-exec-1] Exception processing template "index/main": An error happened during template parsing (template: "class path resource [templates/index/main.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index/main.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1404)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1148)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1087)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "#authentication.isAuthenticated() == Boolean.FALSE" (template: "layout/landing-layout" - line 41, col 31)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 95 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "#authentication.isAuthenticated() == Boolean.FALSE" (template: "layout/landing-layout" - line 41, col 31)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.GatheringModelProcessable.process(GatheringModelProcessable.java:78)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 97 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'FALSE' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:43)
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:32)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 126 common frames omitted
+2022-08-19 10:31:47,423 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index/main.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'FALSE' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:43)
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:32)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.GatheringModelProcessable.process(GatheringModelProcessable.java:78)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1404)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1148)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1087)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-08-19 10:33:10,351 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 14744 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:33:10,353 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:33:10,353 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:33:14,091 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:33:14,870 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.81 seconds (JVM running for 5.308)
+2022-08-19 10:33:16,989 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:33:27,172 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 10:33:27,214 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-19 10:33:43,804 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 10:33:43,830 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 10:35:00,897 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 18212 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:35:00,899 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:35:00,899 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:35:02,441 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [AE29C558E0E95165163CCA73B1AE054C]
+2022-08-19 10:35:04,369 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:35:05,081 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.553 seconds (JVM running for 5.189)
+2022-08-19 10:35:21,273 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:36:23,476 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user uncle-muthu1@gmail.com
+2022-08-19 10:36:23,507 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:36:41,166 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user uncle-muthu1@gmail.com
+2022-08-19 10:36:41,186 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success retrieve all products
+2022-08-19 10:38:07,872 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 20368 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:38:07,874 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:38:07,874 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:38:09,265 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [ABD5F2C5BBC278E1295209953E5DACAE]
+2022-08-19 10:38:11,145 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:38:11,835 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.277 seconds (JVM running for 4.848)
+2022-08-19 10:38:21,075 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 10:38:31,064 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 10:38:31,114 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 10:38:47,764 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 10:38:47,791 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 10:40:18,442 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 7616 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:40:18,443 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:40:18,444 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:40:19,868 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [D7F266F6DB91B30F9EA3CF83F72E516F]
+2022-08-19 10:40:21,777 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:40:22,523 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.382 seconds (JVM running for 4.951)
+2022-08-19 10:43:23,506 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 11356 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:43:23,507 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:43:23,508 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:43:26,919 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:43:27,637 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.422 seconds (JVM running for 4.916)
+2022-08-19 10:43:58,560 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:44:07,087 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user upin@gmail.com
+2022-08-19 10:44:07,127 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-19 10:57:45,204 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 7120 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:57:45,205 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:57:45,205 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:57:46,591 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [55B93D1859EC8D5230BF447FBDE9344E]
+2022-08-19 10:57:48,530 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:57:49,257 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.343 seconds (JVM running for 4.844)
+2022-08-19 10:58:14,553 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 10:58:14,637 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 10:58:38,247 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 20156 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:58:38,248 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:58:38,248 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:58:39,655 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [06CCE64161A8A42B10DBA3FC31965853]
+2022-08-19 10:58:41,817 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:58:42,497 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.546 seconds (JVM running for 5.031)
+2022-08-19 10:58:42,846 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 10:58:51,970 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 10:58:52,009 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 10:59:35,529 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15796 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 10:59:35,530 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 10:59:35,531 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:59:36,929 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [57A6D19C6F5D1B0E7D99CEC2C4235060]
+2022-08-19 10:59:38,733 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:59:39,418 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.237 seconds (JVM running for 4.805)
+2022-08-19 10:59:58,301 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user upin@gmail.com
+2022-08-19 10:59:58,378 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-19 11:00:13,381 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:00:13,404 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:00:27,177 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15740 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:00:27,178 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:00:27,179 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:00:28,559 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [500A2AAEC08955F0F628FA23814EE4F4]
+2022-08-19 11:00:30,435 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:00:31,165 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.271 seconds (JVM running for 4.772)
+2022-08-19 11:00:42,337 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:00:51,562 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:00:51,612 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 11:01:10,314 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 5124 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:01:10,315 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:01:10,316 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:01:11,656 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [B6FEC7FC95CA34F5EFD7FA37603D9545]
+2022-08-19 11:01:13,540 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:01:14,235 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.22 seconds (JVM running for 4.715)
+2022-08-19 11:01:22,953 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:01:30,196 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:01:30,238 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:01:37,201 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:01:46,408 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user upin@gmail.com
+2022-08-19 11:01:46,432 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success retrieve all products
+2022-08-19 11:02:18,904 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 5692 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:02:18,905 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:02:18,906 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:02:20,409 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [3C48BD956111058D657CAF064F15E9BB]
+2022-08-19 11:02:22,249 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:02:22,952 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.356 seconds (JVM running for 4.93)
+2022-08-19 11:02:42,963 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:02:51,364 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:02:51,402 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:03:08,709 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 5464 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:03:08,711 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:03:08,713 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:03:10,360 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [71057FD5BC4E9BE1B1759223BF6A8911]
+2022-08-19 11:03:12,457 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:03:13,174 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.886 seconds (JVM running for 5.476)
+2022-08-19 11:03:16,082 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:03:28,031 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user upin@gmail.com
+2022-08-19 11:03:28,089 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success retrieve all products
+2022-08-19 11:03:30,040 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 11:03:30,068 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-19 11:03:31,846 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:03:31,866 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 11:03:45,621 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:03:45,636 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:07:54,295 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user upin@gmail.com
+2022-08-19 11:07:54,312 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-19 11:08:28,348 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:08:28,360 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:08:29,295 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user upin@gmail.com
+2022-08-19 11:08:29,309 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-19 11:08:47,505 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 17420 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:08:47,506 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:08:47,507 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:08:48,908 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [75D0210C88A162D5C5A22A382EF21117]
+2022-08-19 11:08:50,714 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:08:51,500 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.345 seconds (JVM running for 4.905)
+2022-08-19 11:08:53,156 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:09:03,513 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 11:09:03,567 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 11:09:07,688 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user upin@gmail.com
+2022-08-19 11:09:10,240 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 11:09:10,265 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-19 11:14:40,822 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 10388 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:14:40,824 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:14:40,825 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:14:42,223 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [917274988BABBE9E33647DFEDA8E5DE2]
+2022-08-19 11:14:44,117 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:14:44,849 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.881 seconds (JVM running for 5.471)
+2022-08-19 11:14:54,668 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:14:54,764 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:14:59,106 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:14:59,134 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:15:02,022 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:15:02,041 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:15:07,993 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:15:08,010 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:15:13,392 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:15:13,418 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:15:19,192 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 11:15:19,203 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-19 11:15:19,288 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user upin@gmail.com
+2022-08-19 11:15:19,301 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 11:15:19,301 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user upin@gmail.com
+2022-08-19 11:15:19,301 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user upin@gmail.com
+2022-08-19 11:15:19,307 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:15:19,312 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-19 11:15:19,356 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-19 11:15:19,356 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:15:19,356 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-19 11:15:19,356 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:15:19,385 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:15:19,399 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:15:19,403 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:15:19,443 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user upin@gmail.com
+2022-08-19 11:15:19,449 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 11:15:19,467 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success retrieve all products
+2022-08-19 11:15:39,793 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:15:39,804 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:15:45,597 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-19 11:15:53,928 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:15:53,938 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:16:19,232 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 17560 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:16:19,233 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:16:19,234 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:16:20,590 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [AD68CF7CF67DFC326835FFA7A0D9C129]
+2022-08-19 11:16:22,500 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:16:23,274 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.351 seconds (JVM running for 4.852)
+2022-08-19 11:16:38,420 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:16:38,500 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:17:18,992 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 4416 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:17:18,993 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:17:18,994 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:17:21,221 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [6B2976AA5EBA63DE0FC683C0826124F8]
+2022-08-19 11:17:23,147 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:17:23,852 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.172 seconds (JVM running for 5.668)
+2022-08-19 11:17:38,919 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:17:39,006 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 11:17:43,331 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:17:43,356 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-19 11:20:31,894 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@47:34 - no applicable action for [http], current ElementPath  is [[configuration][http]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@48:49 - no applicable action for [access-denied-handler], current ElementPath  is [[configuration][http][access-denied-handler]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at team.kucing.anabulshopcare.AnabulShopCareApplication.main(AnabulShopCareApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@47:34 - no applicable action for [http], current ElementPath  is [[configuration][http]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@48:49 - no applicable action for [access-denied-handler], current ElementPath  is [[configuration][http][access-denied-handler]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 21 common frames omitted
+2022-08-19 11:24:38,545 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 7272 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:24:38,546 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:24:38,546 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:24:39,983 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [899860F90E9C442153C9A954626C71DD]
+2022-08-19 11:24:41,995 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:24:42,723 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.487 seconds (JVM running for 5.009)
+2022-08-19 11:24:58,626 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15484 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:24:58,628 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:24:58,629 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:25:01,807 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:25:02,476 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.121 seconds (JVM running for 4.61)
+2022-08-19 11:25:23,612 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:25:23,710 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-19 11:26:55,726 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 8748 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:26:55,728 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:26:55,728 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:26:57,111 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [3F1FD22BBFBA41515326400665711B71]
+2022-08-19 11:26:58,964 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:26:59,721 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.365 seconds (JVM running for 5.094)
+2022-08-19 11:27:08,080 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 11:27:26,766 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:27:26,811 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:28:33,390 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 19016 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:28:33,391 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:28:33,392 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:28:34,799 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [C79BDF79CFD1608D2490F6924F939D04]
+2022-08-19 11:28:36,762 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:28:37,509 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.397 seconds (JVM running for 4.921)
+2022-08-19 11:28:39,748 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:28:48,325 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user upin@gmail.com
+2022-08-19 11:28:48,365 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:30:22,872 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:30:22,899 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:30:25,509 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-19 11:30:34,116 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:30:34,127 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:32:08,640 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 17632 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:32:08,641 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:32:08,642 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:32:10,107 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [CC5AED18B9B019F789094212DDA888B1]
+2022-08-19 11:32:12,105 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:32:12,882 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.593 seconds (JVM running for 5.093)
+2022-08-19 11:35:46,670 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 10716 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:35:46,671 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:35:46,671 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:35:48,147 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [13C35DC87CC0F7178F4171798632FD4C]
+2022-08-19 11:35:50,038 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:35:50,741 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.351 seconds (JVM running for 4.837)
+2022-08-19 11:36:29,733 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:36:29,806 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success retrieve all products
+2022-08-19 11:37:05,247 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 11:37:05,279 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success get product with ID: 065a9927-1cea-40b2-8f1c-f73f7923b083
+2022-08-19 11:37:05,488 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:37:12,195 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user upin@gmail.com
+2022-08-19 11:37:12,212 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success get product with ID: 065a9927-1cea-40b2-8f1c-f73f7923b083
+2022-08-19 11:37:12,372 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-5] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:37:27,457 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 11:43:35,312 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 10748 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 11:43:35,313 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 11:43:35,313 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 11:43:36,577 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [425282D55AED30BDB4BB369A3EFDD086]
+2022-08-19 11:43:38,291 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 11:43:38,944 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.894 seconds (JVM running for 4.376)
+2022-08-19 11:44:07,039 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:11,246 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:19,618 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:19,670 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:44:23,837 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:23,854 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success get product with ID: 40213300-175b-4797-966b-afb0495da81e
+2022-08-19 11:44:24,012 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-6] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:44:29,316 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:29,331 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success get product with ID: 40213300-175b-4797-966b-afb0495da81e
+2022-08-19 11:44:29,438 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:44:36,930 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:36,948 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-19 11:44:40,709 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:40,718 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success get product with ID: 99fe91ca-5605-417a-aa4b-4b0a8f26f042
+2022-08-19 11:44:40,814 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-6] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:44:48,152 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user uncle-muthu1@gmail.com
+2022-08-19 11:44:48,165 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success get product with ID: 99fe91ca-5605-417a-aa4b-4b0a8f26f042
+2022-08-19 11:44:48,258 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-7] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:44:51,080 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-19 11:44:59,500 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:44:59,512 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:45:03,332 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user upin@gmail.com
+2022-08-19 11:45:03,346 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-19 11:45:15,137 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 11:45:15,146 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success get product with ID: 00fa6d1d-83dd-459e-b285-8fc9d70e277e
+2022-08-19 11:45:15,240 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-10] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:45:17,274 INFO team.kucing.anabulshopcare.service.impl.WishlistServiceImpl [http-nio-8081-exec-4] upin@gmail.com success add product00fa6d1d-83dd-459e-b285-8fc9d70e277e to their wishlist
+2022-08-19 11:45:17,292 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 11:45:17,299 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-9] Success get product with ID: 00fa6d1d-83dd-459e-b285-8fc9d70e277e
+2022-08-19 11:45:17,404 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-19 11:59:27,679 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user upin@gmail.com
+2022-08-19 12:00:36,767 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 16436 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:00:36,768 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:00:36,768 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:00:38,098 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [C6C1A7EB987CDE3DFD6749E1B00C3B17]
+2022-08-19 12:00:39,819 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:00:40,489 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.993 seconds (JVM running for 4.498)
+2022-08-19 12:00:52,040 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user upin@gmail.com
+2022-08-19 12:01:01,707 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user upin@gmail.com
+2022-08-19 12:03:36,930 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 9476 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:03:36,931 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:03:36,931 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:03:38,202 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [CF09B57FA65536E1D49BA4153572A43A]
+2022-08-19 12:03:39,958 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:03:40,636 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.979 seconds (JVM running for 4.464)
+2022-08-19 12:03:49,322 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 12:03:51,470 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-19 12:04:15,330 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 12052 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:04:15,330 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:04:15,331 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:04:16,583 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [4D8E566AA2F6A5A90976F62C399E3A29]
+2022-08-19 12:04:18,297 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:04:18,931 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.875 seconds (JVM running for 4.406)
+2022-08-19 12:04:26,102 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 12:05:11,259 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15472 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:05:11,260 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:05:11,261 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:05:12,614 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [A00324951C2AFA42D88B7A628BDFBEA2]
+2022-08-19 12:05:14,372 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:05:15,050 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.057 seconds (JVM running for 4.544)
+2022-08-19 12:05:22,809 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com
+2022-08-19 12:06:44,077 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 12556 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:06:44,078 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:06:44,078 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:06:45,390 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [0EA45F293EEE36EA054922486584FF94]
+2022-08-19 12:06:47,190 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:06:47,828 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.017 seconds (JVM running for 4.49)
+2022-08-19 12:06:56,865 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user upin@gmail.com
+2022-08-19 12:08:16,432 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 19224 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:08:16,433 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:08:16,433 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:08:17,645 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [A5098CD04FB56FE7BEEAA970494028EC]
+2022-08-19 12:08:19,352 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:08:20,023 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.857 seconds (JVM running for 4.323)
+2022-08-19 12:08:26,112 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user upin@gmail.com
+2022-08-19 12:09:19,107 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 16508 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:09:19,108 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:09:19,108 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:09:20,412 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [58A5B2EBBABE9A98411F423DEB6BBD34]
+2022-08-19 12:09:22,789 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:09:23,517 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.681 seconds (JVM running for 5.207)
+2022-08-19 12:09:31,039 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user upin@gmail.com
+2022-08-19 12:11:36,935 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 10256 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:11:36,935 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:11:36,936 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:11:38,211 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [D940553A7B1314E42830304E452F6DC6]
+2022-08-19 12:11:39,947 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:11:40,645 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.993 seconds (JVM running for 4.458)
+2022-08-19 12:11:47,643 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user upin@gmail.com
+2022-08-19 12:13:17,736 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user upin@gmail.com
+2022-08-19 12:13:30,490 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 11312 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-19 12:13:30,491 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-19 12:13:30,491 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 12:13:31,845 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [9291F7A9ABFAE5F4A118EF8C554E3066]
+2022-08-19 12:13:33,661 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 12:13:34,354 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.146 seconds (JVM running for 4.654)
+2022-08-19 12:13:41,126 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user upin@gmail.com

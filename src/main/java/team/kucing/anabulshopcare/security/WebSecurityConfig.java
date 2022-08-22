@@ -1,5 +1,6 @@
 package team.kucing.anabulshopcare.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,10 +16,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import team.kucing.anabulshopcare.service.impl.UserAppDetailsService;
 
 @Configuration
 public class WebSecurityConfig {
+
+    @Autowired
+    AccessDeniedHandler accessDeniedHandler;
 
     @Bean
     public UserDetailsService userDetailsService(){
@@ -41,14 +46,16 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        http.authorizeRequests().antMatchers("/","/provinsi.json", "/kota/**","/kecamatan/**","/kelurahan/**","/product/**", "/product-detail/**", "/signup/seller/**","/images-ava/**","/images-prod/**", "/images/**", "/js/**", "/css/**", "/fonts/**").permitAll()
+        http.authorizeRequests().antMatchers("/","/provinsi.json", "/kota/**","/kecamatan/**","/kelurahan/**","/product/**", "/product-detail/**", "/signup/**","/images-ava/**","/images-prod/**", "/images/**", "/js/**", "/css/**", "/fonts/**").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ROLE_SELLER")
                 .antMatchers("/add-wishlist/{id}").hasAuthority("ROLE_BUYER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .usernameParameter("email").permitAll();
+                .usernameParameter("email").permitAll()
+                .and().logout().logoutSuccessUrl("/").permitAll()
+                .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler);
 
         return http.build();
     }

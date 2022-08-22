@@ -9,7 +9,30 @@
 <body>
 <div layout:fragment="content">
     <h1 class="page-title">Tentang Toko Kamu</h1>
-
+        <form action="#">
+            <div class="form-group mt-3">
+                <label class="form-label">Photo Profile</label>
+            </div>
+            <div class="mt-3">
+                <img alt="image-product" class="img-fluid" id="prevImg" th:src="@{{imageUrl}(imageUrl=${userApp.avatars})}"/>
+            </div>
+            <div class="mt-3">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-control" id="firstName" placeholder="First Name" th:field="*{userApp.firstName}" type="text" readonly>
+            </div>
+            <div class="mt-3">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-control" id="lastName" placeholder="Last Name" th:field="*{userApp.lastName}" type="text" readonly>
+            </div>
+            <div class="mt-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" id="email" placeholder="Email User" th:field="*{userApp.email}" type="text" readonly>
+            </div>
+            <a class="btn btn-primary" href="#">Add Product</a>
+        </form>
+    <th:block layout:fragment="optional">
+        <script th:src="@{/js/dashboard/custom.js}"></script>
+    </th:block>
 </div>
 </body>
 </html>

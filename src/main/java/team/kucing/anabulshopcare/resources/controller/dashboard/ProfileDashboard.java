@@ -2,6 +2,7 @@ package team.kucing.anabulshopcare.resources.controller.dashboard;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import team.kucing.anabulshopcare.service.UserAppService;
 public class ProfileDashboard {
     private final UserAppService userAppService;
 
+    @PreAuthorize("hasRole('ROLE_SELLER')")
     @GetMapping("/toko-kamu")
     public String tokoDashboard(@AuthenticationPrincipal UserAppDetails userAppDetails, Model model){
         model.addAttribute("userApp", this.userAppService.getUserByEmail(userAppDetails.getUsername()));

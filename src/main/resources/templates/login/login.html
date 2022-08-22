@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:th="http://www.thymeleaf.org"
-      layout:decorate="~{layout/sign-layout}"
+      layout:decorate="~{layout/landing-layout}"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}" />
+
+    <link rel="stylesheet" th:href="@{/css/signup/owl.carousel.min.css}" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/signup/bootstrap.min.css}" />
+
+    <!-- Style -->
+    <link rel="stylesheet" th:href="@{/css/signup/style.css}" />
     <title>Login</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <div class="d-md-flex half">
-    <div class="bg" style="background-image: url(images/bg-signup.png)"></div>
-    <div class="contents">
-        <div class="container">
+    <div class="container my-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12">
                     <div class="form-block mx-auto">
@@ -45,14 +51,8 @@
                                 />
                             </div>
 
-                            <div class="d-sm-flex mb-5 align-items-center">
-                                <label class="control control--checkbox mb-3 mb-sm-0"
-                                ><span class="caption">Remember me</span>
-                                    <input type="checkbox" checked="checked" />
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <span class="ml-auto"><a th:href="@{/signup}" class="forgot-pass">Create Account</a></span
-                                >
+                            <div class="my-5 text-center">
+                                <span>Don't have an account? Register <a th:href="@{/signup}" class="create-account">here</a></span>
                             </div>
 
                             <input
@@ -65,8 +65,11 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
-</div>
+
+<script th:src="@{/js/signup/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/js/signup/popper.min.js}"></script>
+<script th:src="@{/js/signup/bootstrap.min.js}"></script>
+<script th:src="@{js/signup/main.js}"></script>
 </body>
 </html>

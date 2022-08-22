@@ -23,9 +23,7 @@ public class SignupSeller {
 
     private UserAppService userAppService;
 
-    private AddressServiceImpl addressService;
-
-    @CrossOrigin("http://api.iksgroup.co.id/")
+//    @CrossOrigin("http://api.iksgroup.co.id/")
     @GetMapping("/signup/seller")
     public String showFormSeller(Model model){
         SignupRequest form = new SignupRequest();
@@ -46,6 +44,6 @@ public class SignupSeller {
         log.info("Success Register User Seller " + signupRequest.getEmail());
 
 
-        return "redirect:/";
+        return "signup/success-signup";
     }
 }
