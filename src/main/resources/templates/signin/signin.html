@@ -1,182 +1,95 @@
-<!-- Pills navs -->
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  xmlns:th="http://www.thymeleaf.org"
-	  layout:decorate="~{layout/landing-layout}">
+<html
+		lang="en"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layout/landing-layout}"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+		xmlns:th="http://www.thymeleaf.org"
+>
 <head>
-	<meta charset="UTF-8">
-	<title>Welcome Login Form</title><!-- Font Awesome -->
+	<!-- Required meta tags -->
+	<meta charset="utf-8"/>
 	<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
 			rel="stylesheet"
 	/>
-	<!-- Google Fonts -->
-	<link
-			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-			rel="stylesheet"
+	<meta
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+			name="viewport"
 	/>
-	<!-- MDB -->
-	<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
-			rel="stylesheet"
-	/>
+	<link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}" />
+
+	<link rel="stylesheet" th:href="@{/css/signup/owl.carousel.min.css}" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" th:href="@{/css/signup/bootstrap.min.css}" />
+
+	<!-- Style -->
+	<link rel="stylesheet" th:href="@{/css/signup/style.css}" />
+	<title>Register</title>
 </head>
 <body>
 <div layout:fragment="content">
-	<div class="container">
-		<div class="row justify-content-center">
+	<div class="container my-5">
+		<div class="row align-items-center justify-content-center">
 			<div class="col-md-12">
-				<!-- Pills navs -->
-				<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-					<li class="nav-item" role="presentation">
-						<a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-						   aria-controls="pills-login" aria-selected="true">Login</a>
-					</li>
-					<li class="nav-item" role="presentation">
-						<a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
-						   aria-controls="pills-register" aria-selected="false">Register</a>
-					</li>
-				</ul>
-				<!-- Pills navs -->
-
-				<!-- Pills content -->
-				<div class="tab-content">
-					<div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-						<form>
-							<div class="text-center mb-3">
-								<p>Sign in with:</p>
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-facebook-f"></i>
-								</button>
-
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-google"></i>
-								</button>
-
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-twitter"></i>
-								</button>
-
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-github"></i>
-								</button>
-							</div>
-
-							<p class="text-center">or:</p>
-
-							<!-- Email input -->
-							<div class="form-outline mb-4">
-								<input type="email" id="loginName" class="form-control" />
-								<label class="form-label" for="loginName">Email or username</label>
-							</div>
-
-							<!-- Password input -->
-							<div class="form-outline mb-4">
-								<input type="password" id="loginPassword" class="form-control" />
-								<label class="form-label" for="loginPassword">Password</label>
-							</div>
-
-							<!-- 2 column grid layout -->
-							<div class="row mb-4">
-								<div class="col-md-6 d-flex justify-content-center">
-									<!-- Checkbox -->
-									<div class="form-check mb-3 mb-md-0">
-										<input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-										<label class="form-check-label" for="loginCheck"> Remember me </label>
-									</div>
-								</div>
-
-								<div class="col-md-6 d-flex justify-content-center">
-									<!-- Simple link -->
-									<a href="#!">Forgot password?</a>
-								</div>
-							</div>
-
-							<!-- Submit button -->
-							<button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-							<!-- Register buttons -->
-							<div class="text-center">
-								<p>Not a member? <a href="#!">Register</a></p>
-							</div>
-						</form>
+				<div class="form-block mx-auto">
+					<div class="text-center mb-5">
+						<h3 class="text-uppercase">
+							Register to <strong>Anabul Shop & Care</strong>
+						</h3>
 					</div>
-					<div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-						<form>
-							<div class="text-center mb-3">
-								<p>Sign up with:</p>
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-facebook-f"></i>
-								</button>
+					<form
+							action="#"
+							enctype="multipart/form-data"
+							method="post"
+							th:action="@{/login}"
+					>
+						<div class="mb-3">
+							<label class="form-label" for="email"
+							>Email address</label
+							>
+							<input
+									aria-describedby="emailHelp"
+									class="form-control"
+									id="email"
+									name="email"
+									type="email"
+									placeholder="example@email.com"
+							/>
+						</div>
+						<div class="mb-3">
+							<label class="form-label" for="password">Password</label>
+							<input
+									class="form-control"
+									id="password"
+									name="password"
+									type="password"
+									placeholder="******"
+							/>
+						</div>
 
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-google"></i>
-								</button>
+						<div class="d-sm-flex mb-5 justify-content-center">
+							Not have account? <a class="forgot-pass" th:href="@{/signup}"> Register Here</a>
+						</div>
 
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-twitter"></i>
-								</button>
-
-								<button type="button" class="btn btn-link btn-floating mx-1">
-									<i class="fab fa-github"></i>
-								</button>
-							</div>
-
-							<p class="text-center">or:</p>
-
-							<!-- Name input -->
-							<div class="form-outline mb-4">
-								<input type="text" id="registerName" class="form-control" />
-								<label class="form-label" for="registerName">Name</label>
-							</div>
-
-							<!-- Username input -->
-							<div class="form-outline mb-4">
-								<input type="text" id="registerUsername" class="form-control" />
-								<label class="form-label" for="registerUsername">Username</label>
-							</div>
-
-							<!-- Email input -->
-							<div class="form-outline mb-4">
-								<input type="email" id="registerEmail" class="form-control" />
-								<label class="form-label" for="registerEmail">Email</label>
-							</div>
-
-							<!-- Password input -->
-							<div class="form-outline mb-4">
-								<input type="password" id="registerPassword" class="form-control" />
-								<label class="form-label" for="registerPassword">Password</label>
-							</div>
-
-							<!-- Repeat Password input -->
-							<div class="form-outline mb-4">
-								<input type="password" id="registerRepeatPassword" class="form-control" />
-								<label class="form-label" for="registerRepeatPassword">Repeat password</label>
-							</div>
-
-							<!-- Checkbox -->
-							<div class="form-check d-flex justify-content-center mb-4">
-								<input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-									   aria-describedby="registerCheckHelpText" />
-								<label class="form-check-label" for="registerCheck">
-									I have read and agree to the terms
-								</label>
-							</div>
-
-							<!-- Submit button -->
-							<button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
-						</form>
-					</div>
+						<input
+								class="btn btn-block py-2 btn-primary"
+								type="submit"
+								value="Signin"
+						/>
+					</form>
 				</div>
-				<!-- Pills content -->
 			</div>
 		</div>
 	</div>
 </div>
-<!-- MDB -->
-<script
-		type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
-></script>
+<th:block layout:fragment="optional">
+	<script th:src="@{/js/signup/custom.js}"></script>
+	<script
+			src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+	></script>
+	<script th:src="@{/js/signup/lokasiapi.js}"></script>
+</th:block>
 </body>
 </html>

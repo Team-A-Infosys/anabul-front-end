@@ -31,142 +31,142 @@
 <body>
 <div layout:fragment="content">
     <div class="container my-5">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-12">
-                        <div class="form-block mx-auto">
-                            <div class="text-center mb-5">
-                                <h3 class="text-uppercase">
-                                    Register to <strong>Anabul Shop & Care</strong>
-                                </h3>
-                            </div>
-                            <form
-                                    action="#"
-                                    enctype="multipart/form-data"
-                                    method="post"
-                                    th:action="@{/signup/seller/processing}"
-                                    th:object="${form}"
-                            >
-                                <div class="form-group">
-                                    <label class="form-label" for="customFile"
-                                    >Photo Profile</label
-                                    >
-                                    <div class="custom-file">
-                                        <input id="customFile" name="file" type="file"/>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <img
-                                            alt="avatar-user"
-                                            class="img-fluid w-50"
-                                            id="prevImg"
-                                            src="#"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="firstName"
-                                    >First Name</label
-                                    >
-                                    <input
-                                            class="form-control"
-                                            id="firstName"
-                                            th:field="*{firstName}"
-                                            type="text"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="lastName">Last Name</label>
-                                    <input
-                                            class="form-control"
-                                            id="lastName"
-                                            th:field="*{lastName}"
-                                            type="text"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="email"
-                                    >Email address</label
-                                    >
-                                    <input
-                                            aria-describedby="emailHelp"
-                                            class="form-control"
-                                            id="email"
-                                            th:field="*{email}"
-                                            type="email"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="phone">Phone Number</label>
-                                    <input
-                                            class="form-control"
-                                            id="phone"
-                                            th:field="*{phoneNumber}"
-                                            type="number"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label> Provinsi </label>
-                                    <select
-                                            class="custom-select"
-                                            id="provinsi"
-                                            th:field="*{address.provinsi}"
-                                    ></select>
-                                    <br/>
-                                    <label> Kabupaten </label>
-                                    <select
-                                            class="select2-data-array browser-default"
-                                            id="kabupaten"
-                                            th:field="*{address.kota}"
-                                    ></select>
-                                    <br/>
-                                    <label> Kecamatan </label>
-                                    <select
-                                            class="select2-data-array browser-default"
-                                            id="kecamatan"
-                                            th:field="*{address.kecamatan}"
-                                    ></select>
-                                    <br/>
-                                    <label> Kelurahan </label>
-                                    <select
-                                            class="select2-data-array browser-default"
-                                            id="kelurahan"
-                                            th:field="*{address.kelurahan}"
-                                    ></select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="password">Password</label>
-                                    <input
-                                            class="form-control"
-                                            id="password"
-                                            th:field="*{password}"
-                                            type="password"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="confirmPassword"
-                                    >Confirm Password</label
-                                    >
-                                    <input
-                                            class="form-control"
-                                            id="confirmPassword"
-                                            th:field="*{confirmPassword}"
-                                            type="password"
-                                    />
-                                </div>
-
-                                <div class="d-sm-flex mb-5 justify-content-center">
-                                    <a class="forgot-pass" th:href="@{/login}">Already Registered? Login Here</a>
-                                </div>
-
-                                <input
-                                        class="btn btn-block py-2 btn-primary"
-                                        type="submit"
-                                        value="Register"
-                                />
-                            </form>
-                        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12">
+                <div class="form-block mx-auto">
+                    <div class="text-center mb-5">
+                        <h3 class="text-uppercase">
+                            Register to <strong>Anabul Shop & Care</strong>
+                        </h3>
                     </div>
+                    <form
+                            action="#"
+                            enctype="multipart/form-data"
+                            method="post"
+                            th:action="@{/signup/buyer/processing}"
+                            th:object="${form}"
+                    >
+                        <div class="form-group">
+                            <label class="form-label" for="customFile"
+                            >Photo Profile</label
+                            >
+                            <div class="custom-file">
+                                <input id="customFile" name="file" type="file"/>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <img
+                                    alt="avatar-user"
+                                    class="img-fluid w-50"
+                                    id="prevImg"
+                                    src="#"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="firstName"
+                            >First Name</label
+                            >
+                            <input
+                                    class="form-control"
+                                    id="firstName"
+                                    th:field="*{firstName}"
+                                    type="text"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input
+                                    class="form-control"
+                                    id="lastName"
+                                    th:field="*{lastName}"
+                                    type="text"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email"
+                            >Email address</label
+                            >
+                            <input
+                                    aria-describedby="emailHelp"
+                                    class="form-control"
+                                    id="email"
+                                    th:field="*{email}"
+                                    type="email"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input
+                                    class="form-control"
+                                    id="phone"
+                                    th:field="*{phoneNumber}"
+                                    type="number"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label> Provinsi </label>
+                            <select
+                                    class="custom-select"
+                                    id="provinsi"
+                                    th:field="*{address.provinsi}"
+                            ></select>
+                            <br/>
+                            <label> Kabupaten </label>
+                            <select
+                                    class="select2-data-array browser-default"
+                                    id="kabupaten"
+                                    th:field="*{address.kota}"
+                            ></select>
+                            <br/>
+                            <label> Kecamatan </label>
+                            <select
+                                    class="select2-data-array browser-default"
+                                    id="kecamatan"
+                                    th:field="*{address.kecamatan}"
+                            ></select>
+                            <br/>
+                            <label> Kelurahan </label>
+                            <select
+                                    class="select2-data-array browser-default"
+                                    id="kelurahan"
+                                    th:field="*{address.kelurahan}"
+                            ></select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input
+                                    class="form-control"
+                                    id="password"
+                                    th:field="*{password}"
+                                    type="password"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="confirmPassword"
+                            >Confirm Password</label
+                            >
+                            <input
+                                    class="form-control"
+                                    id="confirmPassword"
+                                    th:field="*{confirmPassword}"
+                                    type="password"
+                            />
+                        </div>
+
+                        <div class="d-sm-flex mb-5 justify-content-center">
+                            <a class="forgot-pass" th:href="@{/login}">Already Registered? Login Here</a>
+                        </div>
+
+                        <input
+                                class="btn btn-block py-2 btn-primary"
+                                type="submit"
+                                value="Register"
+                        />
+                    </form>
                 </div>
             </div>
+        </div>
+    </div>
 </div>
 <th:block layout:fragment="optional">
     <script th:src="@{/js/signup/custom.js}"></script>

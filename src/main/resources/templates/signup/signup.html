@@ -1,34 +1,57 @@
-<!-- Pills navs -->
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  xmlns:th="http://www.thymeleaf.org"
-	  layout:decorate="~{layout/landing-layout}">
+<html
+		lang="en"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layout/landing-layout}"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+		xmlns:th="http://www.thymeleaf.org"
+>
 <head>
-	<meta charset="UTF-8">
-	<title>Welcome Login Form</title><!-- Font Awesome -->
+	<!-- Required meta tags -->
+	<meta charset="utf-8"/>
 	<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
 			rel="stylesheet"
 	/>
-	<!-- Google Fonts -->
-	<link
-			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-			rel="stylesheet"
+	<meta
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+			name="viewport"
 	/>
-	<!-- MDB -->
-	<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
-			rel="stylesheet"
-	/>
+	<link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}" />
+
+	<link rel="stylesheet" th:href="@{/css/signup/owl.carousel.min.css}" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" th:href="@{/css/signup/bootstrap.min.css}" />
+
+	<!-- Style -->
+	<link rel="stylesheet" th:href="@{/css/signup/style.css}" />
+	<title>Register</title>
 </head>
 <body>
 <div layout:fragment="content">
-	<div class="container">
-		<div class="row justify-content-center">
+	<div class="container my-5">
+		<div class="row align-items-center justify-content-center">
 			<div class="col-md-12">
-
+				<div class="form-block mx-auto text-center">
+					<div class="text-center mb-5">
+						<h3 class="text-uppercase">
+							Register to <strong>Anabul Shop & Care</strong>
+						</h3>
+					</div>
+					<a th:href="@{/signup/seller}" class="btn btn-primary btn-sm">Signup Seller</a>
+					<a th:href="@{/signup/buyer}" class="btn btn-primary btn-sm">Signup Buyer</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<body>
+<th:block layout:fragment="optional">
+	<script th:src="@{/js/signup/custom.js}"></script>
+	<script
+			src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+	></script>
+	<script th:src="@{/js/signup/lokasiapi.js}"></script>
+</th:block>
+</body>
+</html>
