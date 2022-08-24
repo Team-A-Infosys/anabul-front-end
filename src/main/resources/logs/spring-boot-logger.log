@@ -6781,3 +6781,9 @@ java.io.StreamCorruptedException: invalid type code: 00
 2022-08-24 12:32:08,512 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user emailupin@gmail.com
 2022-08-24 12:32:12,028 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user emailupin@gmail.com
 2022-08-24 12:32:12,030 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user emailupin@gmail.com
+2022-08-24 12:33:17,955 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 6572 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-24 12:33:17,956 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-24 12:33:17,957 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-24 12:33:19,245 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [633378D5E9E02B8A987852CBA65D34B9]
+2022-08-24 12:33:21,027 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-24 12:33:21,646 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 3.986 seconds (JVM running for 4.445)
