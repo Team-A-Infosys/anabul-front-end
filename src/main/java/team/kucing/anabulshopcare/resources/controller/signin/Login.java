@@ -10,6 +10,6 @@ public class Login {
 
     @GetMapping("/login")
     public String userLogin(){
-        return "login/login";
+        return "signin/signin";
     }
 }
