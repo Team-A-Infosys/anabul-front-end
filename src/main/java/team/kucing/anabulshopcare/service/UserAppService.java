@@ -8,6 +8,7 @@ import team.kucing.anabulshopcare.dto.request.SignupRequest;
 import team.kucing.anabulshopcare.dto.request.UpdateUserRequest;
 import team.kucing.anabulshopcare.dto.response.BuyerResponse;
 import team.kucing.anabulshopcare.dto.response.UserResponse;
+import team.kucing.anabulshopcare.entity.UserApp;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,7 +23,7 @@ public interface UserAppService {
 
     List<UserResponse> getAllUsers(Pageable pageable);
 
-    UserResponse getUser(UUID id);
+    UserApp getUser(UUID id);
 
     UserResponse getUserByEmail(String email);
 

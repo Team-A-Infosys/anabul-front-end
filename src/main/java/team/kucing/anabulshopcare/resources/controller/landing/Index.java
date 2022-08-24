@@ -3,13 +3,20 @@ package team.kucing.anabulshopcare.resources.controller.landing;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import team.kucing.anabulshopcare.dto.request.AddressRequest;
 import team.kucing.anabulshopcare.dto.request.CartRequest;
+import team.kucing.anabulshopcare.dto.request.UpdateUserRequest;
 import team.kucing.anabulshopcare.dto.request.WishlistRequest;
+import team.kucing.anabulshopcare.dto.response.UserResponse;
 import team.kucing.anabulshopcare.entity.Product;
 import team.kucing.anabulshopcare.entity.UserApp;
 import team.kucing.anabulshopcare.entity.UserAppDetails;
@@ -21,6 +28,7 @@ import team.kucing.anabulshopcare.service.UserAppService;
 import team.kucing.anabulshopcare.service.WishlistService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -147,6 +155,47 @@ public class Index {
         model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
 
         return "profile/user";
+    }
+
+    @GetMapping("/profile/edit/{id}")
+    public String editProfile(@PathVariable("id") UUID id, Model model, @AuthenticationPrincipal UserAppDetails userDetails){
+        UserApp userApp = this.userAppService.getUser(id);
+        UpdateUserRequest updateUserRequest = new UpdateUserRequest();
+        updateUserRequest.setFirstName(userApp.getFirstName());
+        updateUserRequest.setLastName(userApp.getLastName());
+        updateUserRequest.setPhoneNumber(userApp.getPhoneNumber());
+        updateUserRequest.setEmail(userApp.getEmail());
+
+        AddressRequest addressRequest = new AddressRequest();
+        addressRequest.setProvinsi(userApp.getAddress().getProvinsi());
+        addressRequest.setKota(userApp.getAddress().getKota());
+        addressRequest.setKecamatan(userApp.getAddress().getKecamatan());
+        addressRequest.setKelurahan(userApp.getAddress().getKelurahan());
+
+        updateUserRequest.setAddress(addressRequest);
+
+        model.addAttribute("userId", userApp.getId());
+        model.addAttribute("userEdit",updateUserRequest);
+        model.addAttribute("userApp",this.userAppService.getUserByEmail(userDetails.getUsername()));
+
+        return "profile/edit-profile";
+    }
+
+    @PostMapping("/profile/edit/{id}/processing")
+    public String editProfileProcessing(@PathVariable("id")UUID id, @ModelAttribute("userEdit") UpdateUserRequest updateUserRequest, @RequestParam("file")MultipartFile file, @AuthenticationPrincipal UserAppDetails userDetails){
+
+        this.userAppService.updateUser( updateUserRequest, file, id);
+
+        return "redirect:/logout";
+    }
+
+    @GetMapping("/logout")
+    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null){
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
+        return "redirect:/";
     }
 
     @GetMapping("/shopping-cart")

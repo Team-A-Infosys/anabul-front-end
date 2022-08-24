@@ -67,6 +67,7 @@ public class UserApp extends ImageProduct {
 
     public UserResponse convertToResponse(){
         return UserResponse.builder()
+                .userId(this.id)
                 .firstName(this.firstName)
                 .lastName(this.lastName)
                 .avatars(this.imageUrl)

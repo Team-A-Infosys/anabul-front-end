@@ -1,0 +1,27 @@
+2022-08-23 09:56:51,502 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 6904 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-23 09:56:51,505 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-23 09:56:51,505 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-23 09:56:56,069 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-23 09:56:56,989 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 5.984 seconds (JVM running for 6.924)
+2022-08-23 09:56:57,402 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-23 09:57:09,998 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islami@gmail.com
+2022-08-23 09:57:10,041 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-23 09:57:16,823 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-23 09:57:28,199 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islami@gmail.com
+2022-08-23 09:57:28,224 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-23 09:57:31,157 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islami@gmail.com
+2022-08-23 09:57:33,857 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user islami@gmail.com
+2022-08-23 09:57:33,876 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-23 09:57:42,757 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islami@gmail.com
+2022-08-23 09:57:48,679 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islami@gmail.com
+2022-08-23 09:57:48,698 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success retrieve all products
+2022-08-23 09:57:49,576 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islami@gmail.com
+2022-08-23 09:57:50,291 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islami@gmail.com
+2022-08-23 09:57:50,313 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-23 09:57:53,167 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islami@gmail.com
+2022-08-23 09:57:58,448 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islami@gmail.com
+2022-08-23 09:58:00,521 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-23 09:58:09,725 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-23 09:58:09,783 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-23 09:58:11,940 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user upin@gmail.com
+2022-08-23 09:58:44,843 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user upin@gmail.com

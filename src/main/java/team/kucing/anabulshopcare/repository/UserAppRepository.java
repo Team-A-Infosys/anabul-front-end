@@ -16,4 +16,6 @@ public interface UserAppRepository extends JpaRepository<UserApp, UUID> {
     boolean existsByPhoneNumber(String phoneNumber);
 
     UserApp findByEmail(String email);
+
+    UserApp findByPhoneNumber(String phoneNumber);
 }

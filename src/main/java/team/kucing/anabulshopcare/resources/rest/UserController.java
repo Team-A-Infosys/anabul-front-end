@@ -42,11 +42,11 @@ public class UserController {
         return ResponseHandler.generateResponse("Success Retrieve All Users", HttpStatus.OK, response);
     }
 
-    @GetMapping("/user/{id}")
-    public ResponseEntity<Object> getUser(@PathVariable("id") UUID id){
-        UserResponse response = this.userAppService.getUser(id);
-        return ResponseHandler.generateResponse("Success get user", HttpStatus.OK, response);
-    }
+//    @GetMapping("/user/{id}")
+//    public ResponseEntity<Object> getUser(@PathVariable("id") UUID id){
+//        UserResponse response = this.userAppService.getUser(id);
+//        return ResponseHandler.generateResponse("Success get user", HttpStatus.OK, response);
+//    }
 
     @PostMapping(value = "/signup/seller/success", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> signupSeller(@RequestPart MultipartFile file, @RequestPart SignupRequest userApp){
@@ -60,11 +60,11 @@ public class UserController {
         return ResponseHandler.generateResponse("Success Create User", HttpStatus.CREATED, response);
     }
 
-    @PutMapping(value = "/user/{id}/update", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<Object> updateUser(@PathVariable(value = "id") UUID id, @RequestPart MultipartFile file, @RequestPart @Valid UpdateUserRequest user) {
-        UserResponse response = this.userAppService.updateUser(user, file, id);
-        return ResponseHandler.generateResponse("Success Update The User", HttpStatus.OK, response);
-    }
+//    @PutMapping(value = "/user/{id}/update", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+//    public ResponseEntity<Object> updateUser(@PathVariable(value = "id") UUID id, @RequestPart MultipartFile file, @RequestPart @Valid UpdateUserRequest user) {
+//        UserResponse response = this.userAppService.updateUser(user, file, id);
+//        return ResponseHandler.generateResponse("Success Update The User", HttpStatus.OK, response);
+//    }
 
     @PutMapping("/user/{id}/changePassword")
     public ResponseEntity<Object> changePassword(@PathVariable(value = "id") UUID id, @RequestBody PasswordRequest passwordRequest){

@@ -87,7 +87,7 @@ public class UserAppServiceImpl implements UserAppService{
     }
 
     @Override
-    public UserResponse getUser(UUID id){
+    public UserApp getUser(UUID id){
         Optional<UserApp> userApp = this.userRepo.findById(id);
         if (userApp.isEmpty()){
             throw new ResourceNotFoundException("User is not found");
@@ -96,7 +96,7 @@ public class UserAppServiceImpl implements UserAppService{
         UserApp getUserApp = userApp.get();
 
         log.info("Success get user " + getUserApp.getEmail());
-        return getUserApp.convertToResponse();
+        return getUserApp;
     }
 
     @Override
@@ -134,12 +134,6 @@ public class UserAppServiceImpl implements UserAppService{
         }
         newUser.setPhoneNumber(request.getPhoneNumber());
         this.userRepo.save(newUser);
-
-//        Provinsi provinsi = this.provinsiRepository.findByNameIgnoreCase(request.getProvinsi());
-//        Kota kota = this.kotaRepository.findByNameIgnoreCase(request.getKota());
-//        Kelurahan kelurahan = this.kelurahanRepository.findByNameIgnoreCase(request.getKelurahan());
-//        Kecamatan kecamatan = this.kecamatanRepository.findByNameIgnoreCase(request.getKecamatan());
-
             Address newAddress = new Address();
             newAddress.setProvinsi(request.getAddress().getProvinsi());
             newAddress.setKota(request.getAddress().getKota());
@@ -183,29 +177,45 @@ public class UserAppServiceImpl implements UserAppService{
             log.info("Success to Update Last Name of User with ID : " + userUpdate.getId()+ " into " + user.getLastName());
         }
         if (user.getEmail()!= null) {
-            if (this.userRepo.existsByEmail(user.getEmail())) {
-                log.error("Cannot use this Email " + user.getEmail() + " try another Email");
-                throw new BadRequestException("Cannot use this Email " + user.getEmail()+ " try another Email");
+            if (Objects.equals(user.getEmail(), userUpdate.getEmail())) {
+                userUpdate.setEmail(user.getEmail());
+                this.userRepo.save(userUpdate);
+                log.info("Success to Update Email of User with ID : " + userUpdate.getId()+ " into " + user.getEmail());
             }
-            userUpdate.setEmail(user.getEmail());
-            this.userRepo.save(userUpdate);
-            log.info("Success to Update Email of User with ID : " + userUpdate.getId()+ " into " + user.getEmail());
+            else {
+                if (this.userRepo.existsByEmail(user.getEmail())) {
+                    log.error("Cannot use this Email " + user.getEmail() + " try another Email");
+                    throw new BadRequestException("Cannot use this Email " + user.getEmail() + " try another Email");
+                } else {
+                    userUpdate.setEmail(user.getEmail());
+                    this.userRepo.save(userUpdate);
+                }
+            }
         }
         if (user.getAddress() != null){
             this.updateAddressUser(user.getAddress(), id);
         }
-        if (user.getPhoneNumber()!= null) {
-            if (this.userRepo.existsByPhoneNumber(user.getPhoneNumber())) {
-                log.error("Cannot use this Phone Number " + user.getPhoneNumber() + " try another Phone Number");
-                throw new BadRequestException("Cannot use this Phone Number " + user.getPhoneNumber()+ " try another Phone Number");
-            }
-            userUpdate.setPhoneNumber(user.getPhoneNumber());
+        if (user.getAddress().getProvinsi() == null){
             this.userRepo.save(userUpdate);
-            log.info("Success to Update Phone Number of User with ID : " + userUpdate.getId()+ " into " + user.getPhoneNumber());
+        }
+        if (user.getPhoneNumber()!= null) {
+            if (Objects.equals(user.getPhoneNumber(), userUpdate.getPhoneNumber())) {
+                this.userRepo.save(userUpdate);
+                log.info("Success to Update Phone Number of User with ID : " + userUpdate.getId()+ " into " + user.getPhoneNumber());
+            }
+            else {
+                if (this.userRepo.existsByPhoneNumber(user.getPhoneNumber())) {
+                    log.error("Cannot use this Phone Number " + user.getPhoneNumber() + " try another Phone Number");
+                    throw new BadRequestException("Cannot use this Phone Number " + user.getPhoneNumber() + " try another Phone Number");
+                } else {
+                    userUpdate.setPhoneNumber(user.getPhoneNumber());
+                    this.userRepo.save(userUpdate);
+                }
+            }
         }
         if (!(file.isEmpty())){
             String fileName = fileStorageService.storeFile(file);
-            String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path(fileName).toUriString();
+            String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("images-ava/"+fileName).toUriString();
             userUpdate.setImageUrl(fileDownloadUri);
             this.userRepo.save(userUpdate);
             log.info("Success to Update Image of User with ID : " + userUpdate.getId() + " into " + fileDownloadUri);
@@ -233,33 +243,48 @@ public class UserAppServiceImpl implements UserAppService{
 
     private void updateAddressUser(AddressRequest addressRequest, UUID id){
         UserApp updateAddressUser = this.findById(id);
-        Optional<Provinsi> findProvinsi = this.provinsiRepository.findById(addressRequest.getProvinsi().getId());
-        if (findProvinsi.isEmpty()){
-            throw new ResourceNotFoundException("Provinsi is not found");
-        }
-        Provinsi getProvinsi = findProvinsi.get();
-        updateAddressUser.getAddress().setProvinsi(getProvinsi);
 
-        Optional<Kota> findKota = this.kotaRepository.findById(addressRequest.getKota().getId());
-        if (findKota.isEmpty()){
-            throw new ResourceNotFoundException("Kota is not found");
+        if (addressRequest.getProvinsi() == null){
+            this.userRepo.save(updateAddressUser);
+        } else {
+            Optional<Provinsi> findProvinsi = this.provinsiRepository.findById(addressRequest.getProvinsi().getId());
+            if (findProvinsi.isPresent()) {
+                Provinsi getProvinsi = findProvinsi.get();
+                updateAddressUser.getAddress().setProvinsi(getProvinsi);
+            }
         }
-        Kota getKota = findKota.get();
-        updateAddressUser.getAddress().setKota(getKota);
 
-        Optional<Kecamatan> findKecamatan = this.kecamatanRepository.findById(addressRequest.getKecamatan().getId());
-        if (findKecamatan.isEmpty()){
-            throw new ResourceNotFoundException("Kecamatan is not found");
-        }
-        Kecamatan getKecamatan = findKecamatan.get();
-        updateAddressUser.getAddress().setKecamatan(getKecamatan);
+        if (addressRequest.getKota() == null){
+            this.userRepo.save(updateAddressUser);
+        } else {
 
-        Optional<Kelurahan> findKelurahan = this.kelurahanRepository.findById(addressRequest.getKelurahan().getId());
-        if (findKelurahan.isEmpty()){
-            throw new ResourceNotFoundException("Kelurahan is not found");
+            Optional<Kota> findKota = this.kotaRepository.findById(addressRequest.getKota().getId());
+            if (findKota.isPresent()) {
+                Kota getKota = findKota.get();
+                updateAddressUser.getAddress().setKota(getKota);
+            }
         }
-        Kelurahan getKelurahan = findKelurahan.get();
-        updateAddressUser.getAddress().setKelurahan(getKelurahan);
+
+        if (addressRequest.getKecamatan() == null){
+            this.userRepo.save(updateAddressUser);
+        } else {
+            Optional<Kecamatan> findKecamatan = this.kecamatanRepository.findById(addressRequest.getKecamatan().getId());
+            if (findKecamatan.isPresent()) {
+                Kecamatan getKecamatan = findKecamatan.get();
+                updateAddressUser.getAddress().setKecamatan(getKecamatan);
+            }
+        }
+
+        if (addressRequest.getKelurahan() == null){
+            this.userRepo.save(updateAddressUser);
+        } else {
+
+            Optional<Kelurahan> findKelurahan = this.kelurahanRepository.findById(addressRequest.getKelurahan().getId());
+            if (findKelurahan.isPresent()) {
+                Kelurahan getKelurahan = findKelurahan.get();
+                updateAddressUser.getAddress().setKelurahan(getKelurahan);
+            }
+        }
 
         this.userRepo.save(updateAddressUser);
     }

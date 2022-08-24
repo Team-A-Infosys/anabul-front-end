@@ -8,6 +8,7 @@ import team.kucing.anabulshopcare.entity.Wishlist;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -16,6 +17,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class UserResponse {
+
+    private UUID userId;
 
     private String firstName;
 

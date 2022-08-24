@@ -9,7 +9,7 @@
           href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
           rel="stylesheet"
   />
-  <title>Title</title>
+  <title>User Profile</title>
 </head>
 <body>
 
@@ -31,20 +31,61 @@
   <!-- History Cart -->
   <form class="bg0 p-t-75 p-b-85">
     <div class="container">
-      <div class="row my-3 m-lr-auto">
-        <img th:src="@{{imageUrl}(imageUrl=${userApp.avatars})}" class="w-20" alt="IMG">
-      </div>
-      <div class="row my-3 m-lr-auto">
-        <span class="h4">First Name : <span th:text="${userApp.firstName}"></span></span>
-      </div>
-      <div class="row my-3 m-lr-auto">
-        <span class="h4">Last Name : <span th:text="${userApp.lastName}"></span></span>
-      </div>
-      <div class="row my-3 m-lr-auto">
-        <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50 text-center">
           <div class="m-l-25 m-r--38 m-lr-0-xl">
+              <img th:src="@{{imageUrl}(imageUrl=${userApp.avatars})}" class="w-10" alt="IMG">
+            </div>
+          </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+               <span class="h5">First Name : <span th:text="${userApp.firstName}"></span></span>
+            </div>
+          </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Last Name : <span th:text="${userApp.lastName}"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Phone Number : <span th:text="${userApp.phoneNumber}"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Email : <span th:text="${userApp.email}"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Address : <span th:text="${userApp.address}"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <a th:href="@{/profile/edit/{id}(id=${userApp.userId})}" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">Edit Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto m-b-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">History</span>
             <div class="wrap-table-shopping-cart">
-              <table class="table-shopping-cart">
+              <table class="table-shopping-cart mt-3">
                 <tr class="table_head">
                   <th class="column-1">Product</th>
                   <th class="column-2"></th>
