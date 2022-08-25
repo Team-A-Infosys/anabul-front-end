@@ -71,6 +71,7 @@ public class Checkout {
                 .isPaid(this.isPaid)
                 .paymentGateway(this.paymentGateway.convertToResponse())
                 .discount(this.valueCoupon)
-                .checkoutTotal(this.checkoutTotal).build();
+                .checkoutTotal(this.checkoutTotal)
+                .createdAt(this.createdAt).build();
     }
 }

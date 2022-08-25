@@ -43,10 +43,14 @@
             <span class="h5">Courier : <span th:text="${checkout.courier}"></span></span>
             <br>
             <br>
+            <span class="h5">Shipment Cost : Rp. <span th:text="${#numbers.formatDecimal(checkout.shipmentCost,  0, 'COMMA', 0, 'POINT')}"></span></span>
+            <br>
+            <br>
             <span class="h5">Payment Gateway</span>
             <br>
             <br>
-            <span class="h5" th:text="${checkout.paymentGateway.bankName}"></span>
+            <span><img th:src="@{/images/bca.png}" class="w-25 img-fluid" alt="ICON-PAY"></span>
+            <br>
             <br>
             <span class="h5" th:text="${checkout.paymentGateway.bankAccount}"></span>
             <br>
@@ -66,10 +70,11 @@
               <table class="table-shopping-cart mt-3">
                 <tr class="table_head">
                   <th class="column-1">Product</th>
-                  <th class="column-2"></th>
-                  <th class="column-3">Price</th>
-                  <th class="column-4">Quantity</th>
-                  <th class="column-5">Total</th>
+                  <th class="column-2 text-center">Name</th>
+                  <th class="column-3 text-center">Price</th>
+                  <th class="column-4 text-center">Quantity</th>
+                  <th class="column-4 text-center">Total</th>
+                  <th class="column-5 text-center">Date</th>
                 </tr>
 
                 <tr class="table_row" th:each="cart : ${checkout.getCart()}">
@@ -78,10 +83,11 @@
                       <img th:src="@{{imageUrl}(imageUrl=${cart.imageProduct})}" alt="IMG">
                     </div>
                   </td>
-                  <td class="column-2" th:text="${cart.productName}"></td>
-                  <td class="column-3"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.price,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-2 text-center" th:text="${cart.productName}"></td>
+                  <td class="column-3 text-center"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.price,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
                   <td class="column-4 text-center" th:text="${cart.quantity}"></td>
-                  <td class="column-5"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.subTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-4 text-center"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.subTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-5 text-center" th:text="${#dates.format(checkout.createdAt, 'dd-MM-yyyy HH:mm')}"></td>
                 </tr>
               </table>
             </div>

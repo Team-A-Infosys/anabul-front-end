@@ -88,20 +88,20 @@
               <table class="table-shopping-cart mt-3">
                 <tr class="table_head">
                   <th class="column-1">Checkout ID</th>
-                  <th class="column-2"></th>
-                  <th class="column-1">Details</th>
+                  <th class="column-2 text-center">Date</th>
+                  <th class="column-3 text-center">Details</th>
                   <th class="column-1">Shipment Address</th>
-                  <th class="column-1">Courier</th>
-                  <th class="column-1">Total</th>
+                  <th class="column-5">Courier</th>
+                  <th class="column-5 text-center">Total</th>
                 </tr>
 
                 <tr class="table_row" th:each="checkout : ${userApp.getHistory()}">
                   <td class="column-1" th:text="${checkout.id}"></td>
-                  <td class="column-2"></td>
-                  <td class="column-1"><a th:href="@{/checkout/details/{id}(id=${checkout.id})}">Details</a></td>
+                  <td class="column-2 text-center" th:text="${#dates.format(checkout.createdAt, 'dd-MM-yyyy HH:mm')}"></td>
+                  <td class="column-3 text-center"><a th:href="@{/checkout/details/{id}(id=${checkout.id})}">Details</a></td>
                   <td class="column-1" th:text="${checkout.shipmentAddress}"></td>
-                  <td class="column-1" th:text="${checkout.courier}"></td>
-                  <td class="column-1"> <span>Rp. <span th:text="${#numbers.formatDecimal(checkout.checkoutTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-5" th:text="${checkout.courier}"></td>
+                  <td class="column-5 text-center"> <span>Rp. <span th:text="${#numbers.formatDecimal(checkout.checkoutTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
                 </tr>
               </table>
             </div>

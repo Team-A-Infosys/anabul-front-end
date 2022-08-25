@@ -46,7 +46,7 @@
                   <td class="column-4 text-center">
                     <a th:href="@{/checkout/details/{id}(id=${checkout.id})}">Confirm Payment</a>
                   </td>
-                  <td class="column-5 text-center" th:text="${checkout.createdAt}"></td>
+                  <td class="column-5 text-center" th:text="${#dates.format(checkout.createdAt, 'dd-MM-yyyy HH:mm')}"></td>
                 </tr>
               </table>
             </div>

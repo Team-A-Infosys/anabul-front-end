@@ -2,6 +2,8 @@ package team.kucing.anabulshopcare.dto.response;
 
 import lombok.*;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @ToString
@@ -23,5 +25,7 @@ public class CartResponse {
     private int quantity;
 
     private double subTotal;
+
+    private Date createdAt;
 
 }

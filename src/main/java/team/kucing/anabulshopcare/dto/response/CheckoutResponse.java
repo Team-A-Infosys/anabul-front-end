@@ -2,6 +2,7 @@ package team.kucing.anabulshopcare.dto.response;
 
 import lombok.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -32,4 +33,6 @@ public class CheckoutResponse {
     private boolean isPaid;
 
     private PaymentResponse paymentGateway;
+
+    private Date createdAt;
 }

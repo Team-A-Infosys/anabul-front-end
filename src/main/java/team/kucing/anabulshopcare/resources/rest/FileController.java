@@ -24,12 +24,12 @@ public class FileController {
 
     private UserAvatarService userAvatarService;
 
-    @GetMapping("/images-prod/{fileName:.+}")
+    @GetMapping("/images/product/{fileName:.+}")
     public ResponseEntity<Resource> fileProduct(@PathVariable String fileName, HttpServletRequest request) {
         return getResourceResponseEntity(request, imageProductService.loadFileAsResource(fileName), fileName);
     }
 
-    @GetMapping("/images-ava/{fileName:.+}")
+    @GetMapping("/images/user/{fileName:.+}")
     public ResponseEntity<Resource> fileUser(@PathVariable String fileName, HttpServletRequest request) {
         return getResourceResponseEntity(request, userAvatarService.loadFileAsResource(fileName), fileName);
     }
