@@ -46,7 +46,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        http.authorizeRequests().antMatchers("/","/logout","/provinsi.json", "/kota/**","/kecamatan/**","/kelurahan/**","/product/**", "/product-detail/**", "/signup/**", "/images/**", "/js/**", "/css/**", "/fonts/**").permitAll()
+        http.authorizeRequests().antMatchers("/","/logout","/page/**","/provinsi.json", "/kota/**","/kecamatan/**","/kelurahan/**","/product/**", "/product-detail/**", "/signup/**", "/images/**", "/js/**", "/css/**", "/fonts/**").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ROLE_SELLER")
                 .antMatchers("/add-wishlist/{id}").hasAuthority("ROLE_BUYER")
                 .anyRequest().authenticated()
