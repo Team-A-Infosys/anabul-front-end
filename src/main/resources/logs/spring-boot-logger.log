@@ -503,3 +503,122 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2022-08-25 13:49:51,674 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-08-25 13:49:52,315 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.292 seconds (JVM running for 5.007)
 2022-08-25 13:50:13,827 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:14:54,847 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 15744 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-25 14:14:54,848 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-25 14:14:54,849 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-25 14:14:58,108 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 14:14:58,815 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.255 seconds (JVM running for 4.792)
+2022-08-25 14:15:02,788 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:20:31,849 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-25 14:23:49,844 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 19472 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-25 14:23:49,845 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-25 14:23:49,846 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-25 14:23:53,067 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 14:23:53,794 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.245 seconds (JVM running for 4.766)
+2022-08-25 14:24:40,022 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:24:54,165 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-4] Success retrieve all products
+2022-08-25 14:25:26,266 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 19204 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-25 14:25:26,267 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-25 14:25:26,268 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-25 14:25:29,548 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 14:25:30,248 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.274 seconds (JVM running for 4.783)
+2022-08-25 14:25:41,017 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:25:47,030 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-25 14:28:25,693 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:28:25,763 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:28:31,658 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islamiharist8@gmail.com
+2022-08-25 14:28:31,692 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islamiharist8@gmail.com
+2022-08-25 14:28:48,671 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:28:48,706 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-25 14:28:59,434 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:28:59,456 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success retrieve all products
+2022-08-25 14:29:02,557 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:02,582 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-8] Success get product with ID: 62b01931-23b3-40b9-9305-0db8cb52b99b
+2022-08-25 14:29:02,756 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-4] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-25 14:29:07,814 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:07,830 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success get product with ID: 62b01931-23b3-40b9-9305-0db8cb52b99b
+2022-08-25 14:29:07,931 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-2] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-25 14:29:12,144 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:12,159 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:12,173 INFO team.kucing.anabulshopcare.service.impl.PaymentServiceImpl [http-nio-8081-exec-3] success get All Payments
+2022-08-25 14:29:12,180 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:44,792 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:44,811 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:44,874 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:54,251 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islamiharist8@gmail.com
+2022-08-25 14:29:54,266 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islamiharist8@gmail.com
+2022-08-25 14:30:04,571 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:30:19,187 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islamiharist8@gmail.com
+2022-08-25 14:30:29,559 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:30:51,758 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:01,052 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:04,979 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:04,990 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:09,234 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:11,793 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:13,932 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:21,600 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:21,602 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:26,961 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islamiharist8@gmail.com
+2022-08-25 14:31:33,824 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-25 14:31:50,287 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islami@gmail.com
+2022-08-25 14:31:50,295 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-25 14:31:55,086 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user islami@gmail.com
+2022-08-25 14:31:58,485 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islami@gmail.com
+2022-08-25 14:31:58,492 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-3] Success retrieve all products
+2022-08-25 14:32:10,441 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success get product with ID: 66568b5e-2a7d-492d-84e6-9df0808b34c0
+2022-08-25 14:32:10,442 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success publish the product with ID: 66568b5e-2a7d-492d-84e6-9df0808b34c0
+2022-08-25 14:32:10,448 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islami@gmail.com
+2022-08-25 14:32:10,452 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-25 14:32:21,963 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islami@gmail.com
+2022-08-25 14:32:23,481 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islami@gmail.com
+2022-08-25 14:32:23,545 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user islami@gmail.com
+2022-08-25 14:32:34,275 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islami@gmail.com
+2022-08-25 14:32:34,280 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-25 14:47:41,828 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AnabulShopCareApplication using Java 18.0.1.1 on Harist with PID 3824 (D:\learn-java\anabul-front-end\target\classes started by islam in D:\learn-java\anabul-front-end)
+2022-08-25 14:47:41,829 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-25 14:47:41,830 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-25 14:47:43,209 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [9716B3623F39CB3D2B789DB36C26BB49]
+2022-08-25 14:47:45,075 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 14:47:45,770 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AnabulShopCareApplication in 4.294 seconds (JVM running for 5.016)
+2022-08-25 14:47:48,840 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-25 14:51:32,229 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islamiharist8@gmail.com
+2022-08-25 14:51:32,294 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-10] Success retrieve all products
+2022-08-25 14:51:48,097 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:51:48,123 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-25 14:51:50,199 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:51:50,224 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products
+2022-08-25 14:51:54,810 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:51:54,826 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success get product with ID: f46d20d9-57ae-45a4-be6e-5f1a55a65f58
+2022-08-25 14:51:54,927 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-10] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-25 14:51:58,133 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-1] Success get user islamiharist8@gmail.com
+2022-08-25 14:51:58,147 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-1] Success get product with ID: f46d20d9-57ae-45a4-be6e-5f1a55a65f58
+2022-08-25 14:51:58,247 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: undefined]
+2022-08-25 14:52:07,369 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:07,384 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:07,392 INFO team.kucing.anabulshopcare.service.impl.PaymentServiceImpl [http-nio-8081-exec-9] success get All Payments
+2022-08-25 14:52:07,396 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-9] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:26,904 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:26,916 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:26,948 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-2] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:29,867 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:29,881 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user islamiharist8@gmail.com
+2022-08-25 14:52:55,866 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-4] Success get user islamiharist8@gmail.com
+2022-08-25 14:53:21,512 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:53:29,632 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islamiharist8@gmail.com
+2022-08-25 14:53:52,221 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-10] Success get user islamiharist8@gmail.com
+2022-08-25 14:53:56,638 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user islamiharist8@gmail.com
+2022-08-25 14:54:01,491 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:54:01,493 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-3] Success get user islamiharist8@gmail.com
+2022-08-25 14:54:16,313 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user islamiharist8@gmail.com
+2022-08-25 14:54:21,600 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-2] Success retrieve all products
+2022-08-25 14:54:30,017 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-6] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:54:30,032 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-6] Success retrieve all products
+2022-08-25 14:54:33,793 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:54:36,018 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:54:36,031 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-25 14:55:32,201 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-8] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:55:34,094 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-7] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:55:34,100 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-7] Success retrieve all products
+2022-08-25 14:55:36,445 INFO team.kucing.anabulshopcare.service.impl.UserAppServiceImpl [http-nio-8081-exec-5] Success get user uncle-muthu1@gmail.com
+2022-08-25 14:55:36,451 INFO team.kucing.anabulshopcare.service.impl.ProductServiceImpl [http-nio-8081-exec-5] Success retrieve all products

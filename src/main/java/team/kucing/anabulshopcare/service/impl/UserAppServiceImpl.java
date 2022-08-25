@@ -57,7 +57,7 @@ public class UserAppServiceImpl implements UserAppService{
     public UserResponse signUpSeller(SignupRequest newUser, MultipartFile file) {
 
         String fileName = fileStorageService.storeFile(file);
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images/user/" + fileName).toUriString();
+        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images-ava/" + fileName).toUriString();
         Role getRole = this.roleRepo.findByName("ROLE_SELLER");
 
         return saveUser(newUser, fileDownloadUri, getRole);
@@ -66,7 +66,7 @@ public class UserAppServiceImpl implements UserAppService{
     @Override
     public UserResponse signUpBuyer(SignupRequest newUser, MultipartFile file) {
         String fileName = fileStorageService.storeFile(file);
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images/user/" + fileName).toUriString();
+        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images-ava/" + fileName).toUriString();
         Role getRole = this.roleRepo.findByName("ROLE_BUYER");
 
         return saveUser(newUser, fileDownloadUri, getRole);
@@ -215,7 +215,7 @@ public class UserAppServiceImpl implements UserAppService{
         }
         if (!(file.isEmpty())){
             String fileName = fileStorageService.storeFile(file);
-            String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("images/user/"+fileName).toUriString();
+            String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("images-ava/"+fileName).toUriString();
             userUpdate.setImageUrl(fileDownloadUri);
             this.userRepo.save(userUpdate);
             log.info("Success to Update Image of User with ID : " + userUpdate.getId() + " into " + fileDownloadUri);
