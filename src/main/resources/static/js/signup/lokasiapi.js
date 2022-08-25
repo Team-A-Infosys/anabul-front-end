@@ -1,7 +1,7 @@
-var urlProvinsi = "http://localhost:8081/provinsi.json"
-var urlKabupaten = "http://localhost:8081/kota/"
-var urlKecamatan = "http://localhost:8081/kecamatan/"
-var urlKelurahan = "http://localhost:8081/kelurahan/"
+var urlProvinsi = "https://anabul-shop-care.herokuapp.com/provinsi.json"
+var urlKabupaten = "https://anabul-shop-care.herokuapp.com/kota/"
+var urlKecamatan = "https://anabul-shop-care.herokuapp.com/kecamatan/"
+var urlKelurahan = "https://anabul-shop-care.herokuapp.com/kelurahan/"
 
 function clearOptions(id) {
     console.log("on clearOptions :" + id)
