@@ -12,24 +12,23 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import team.kucing.anabulshopcare.dto.request.AddressRequest;
-import team.kucing.anabulshopcare.dto.request.CartRequest;
-import team.kucing.anabulshopcare.dto.request.UpdateUserRequest;
-import team.kucing.anabulshopcare.dto.request.WishlistRequest;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import team.kucing.anabulshopcare.dto.request.*;
+import team.kucing.anabulshopcare.dto.response.CartResponse;
+import team.kucing.anabulshopcare.dto.response.CheckoutResponse;
 import team.kucing.anabulshopcare.dto.response.UserResponse;
-import team.kucing.anabulshopcare.entity.Product;
-import team.kucing.anabulshopcare.entity.UserApp;
-import team.kucing.anabulshopcare.entity.UserAppDetails;
+import team.kucing.anabulshopcare.entity.*;
 import team.kucing.anabulshopcare.exception.BadRequestException;
 import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
-import team.kucing.anabulshopcare.service.CartService;
-import team.kucing.anabulshopcare.service.ProductService;
-import team.kucing.anabulshopcare.service.UserAppService;
-import team.kucing.anabulshopcare.service.WishlistService;
+import team.kucing.anabulshopcare.repository.CheckoutRepository;
+import team.kucing.anabulshopcare.repository.CouponRepository;
+import team.kucing.anabulshopcare.service.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 @Controller
@@ -45,6 +44,15 @@ public class Index {
 
     private CartService cartService;
 
+    private ShipmentService shipmentService;
+
+    private CouponRepository couponRepository;
+
+    private CheckoutService checkoutService;
+
+    private PaymentService paymentService;
+
+    private CheckoutRepository checkoutRepository;
     @GetMapping("/")
     public String index(Model model, @AuthenticationPrincipal UserAppDetails userDetails){
         if (userDetails == null){
@@ -200,9 +208,85 @@ public class Index {
 
     @GetMapping("/shopping-cart")
     public String shoppingCart(@AuthenticationPrincipal UserAppDetails userDetails, Model model){
+        UserResponse response = this.userAppService.getUserByEmail(userDetails.getUsername());
+        UserApp userApp = this.userAppService.getUser(response.getUserId());
+
+        Shipment shipment = this.shipmentService.findShipmentPriceByProvinsi(userApp.getAddress().getProvinsi());
+        double priceShipment = shipment.getPrice();
+
+        var subTotal = response.getCartList().stream().mapToDouble(CartResponse::getSubTotal).sum();
+        var total = priceShipment + subTotal;
+
+        CheckoutRequest checkoutRequest = new CheckoutRequest();
+        model.addAttribute("checkoutRequest", checkoutRequest);
+        model.addAttribute("payment", this.paymentService.getAllPayment());
+
+        model.addAttribute("subTotal", subTotal);
+        model.addAttribute("total", total);
+        model.addAttribute("priceShipment",priceShipment);
         model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
 
         return "index/shopping-cart";
+    }
+
+    @GetMapping("/check/coupon")
+    public String checkCoupon(Model model, @RequestParam(value = "coupon", required = false) String coupon, @AuthenticationPrincipal UserAppDetails userDetails, RedirectAttributes redirectAttributes){
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getUsername()));
+
+        Coupon checkCoupon = this.couponRepository.findByCode(coupon.toUpperCase());
+        if (checkCoupon != null){
+            redirectAttributes.addFlashAttribute("available", "Coupon is Available");
+        } else{
+            redirectAttributes.addFlashAttribute("notAvailable", "Coupon is not valid");
+        }
+
+        return "redirect:/shopping-cart";
+    }
+
+    @PostMapping("/checkout")
+    public String checkout(Authentication userDetails,Model model, @ModelAttribute("checkoutRequest") CheckoutRequest checkoutRequest){
+        UserResponse response = this.userAppService.getUserByEmail(userDetails.getName());
+        UserApp userApp = this.userAppService.getUser(response.getUserId());
+
+        this.checkoutService.createCheckout(userApp.getId(), checkoutRequest);
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getName()));
+
+        return "index/success-checkout";
+    }
+
+    @GetMapping("/checkout/list")
+    public String listCheckout(Authentication userDetails, Model model){
+        UserResponse response = this.userAppService.getUserByEmail(userDetails.getName());
+        UserApp userApp = this.userAppService.getUser(response.getUserId());
+
+        List<Checkout> checkout = this.checkoutRepository.findByUserAppAndIsPaid(userApp, Boolean.FALSE);
+
+        model.addAttribute("userApp", response);
+        model.addAttribute("listCheckout", checkout);
+        return "index/confirm-payment";
+    }
+
+    @GetMapping("/checkout/details/{id}")
+    public String checkoutDetails(@PathVariable("id") UUID id, Authentication userDetails, Model model){
+        UserResponse response = this.userAppService.getUserByEmail(userDetails.getName());
+        model.addAttribute("userApp", response);
+
+        Optional<Checkout> checkout = this.checkoutRepository.findById(id);
+        if (checkout.isPresent()){
+            CheckoutResponse getCheckout = checkout.get().convertToResponse();
+            model.addAttribute("checkout", getCheckout);
+        }
+
+        return "index/checkout-details";
+    }
+
+    @GetMapping("/checkout/confirmPayment/{id}")
+    public String confirmPayment(@PathVariable("id") UUID id, Authentication userDetails, Model model){
+        model.addAttribute("userApp", this.userAppService.getUserByEmail(userDetails.getName()));
+
+        this.checkoutService.confirmPayment(id);
+
+        return "index/success-paid";
     }
 
     @GetMapping("/add-cart/{id}")

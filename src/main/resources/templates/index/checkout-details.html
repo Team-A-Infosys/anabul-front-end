@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="www.thymeleaf.org"
+      layout:decorate="~{layout/landing-layout}"
+>
+<head>
+  <meta charset="UTF-8">
+  <link
+          href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+          rel="stylesheet"
+  />
+  <title>User Profile</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+  <!-- breadcrumb -->
+  <div class="container">
+    <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+      <a th:href="@{/}" class="stext-109 cl8 hov-cl1 trans-04">
+        Home
+        <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+      </a>
+
+      <span class="stext-109 cl4">
+				Checkout Details
+			</span>
+    </div>
+  </div>
+
+  <!-- History Cart -->
+  <form class="bg0 p-t-75 p-b-85">
+    <div class="container">
+      <div class="row m-lr-auto">
+        <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Checkout ID : <span th:text="${checkout.id}"></span></span>
+            <br>
+            <br>
+            <span class="h5">Shipment Address : <span th:text="${checkout.shipmentAddress}"></span></span>
+            <br>
+            <br>
+            <span class="h5">Courier : <span th:text="${checkout.courier}"></span></span>
+            <br>
+            <br>
+            <span class="h5">Payment Gateway</span>
+            <br>
+            <br>
+            <span class="h5" th:text="${checkout.paymentGateway.bankName}"></span>
+            <br>
+            <span class="h5" th:text="${checkout.paymentGateway.bankAccount}"></span>
+            <br>
+            <span class="h5" th:text="${checkout.paymentGateway.accountName}"></span>
+            <br>
+            <br>
+            <span class="h5" th:if="${checkout.paid == false}"><a th:href="@{@{/checkout/confirmPayment/{id}(id=${checkout.id})}}" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Confirm Payment</a></span>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="row m-lr-auto my03">
+        <div class="col-lg-10 col-xl-7 m-lr-auto m-b-3 text-center">
+          <div class="m-l-25 m-r--38 m-lr-0-xl">
+            <span class="h5">Cart Details</span>
+            <div class="wrap-table-shopping-cart">
+              <table class="table-shopping-cart mt-3">
+                <tr class="table_head">
+                  <th class="column-1">Product</th>
+                  <th class="column-2"></th>
+                  <th class="column-3">Price</th>
+                  <th class="column-4">Quantity</th>
+                  <th class="column-5">Total</th>
+                </tr>
+
+                <tr class="table_row" th:each="cart : ${checkout.getCart()}">
+                  <td class="column-1">
+                    <div class="how-itemcart1">
+                      <img th:src="@{{imageUrl}(imageUrl=${cart.imageProduct})}" alt="IMG">
+                    </div>
+                  </td>
+                  <td class="column-2" th:text="${cart.productName}"></td>
+                  <td class="column-3"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.price,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                  <td class="column-4 text-center" th:text="${cart.quantity}"></td>
+                  <td class="column-5"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.subTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

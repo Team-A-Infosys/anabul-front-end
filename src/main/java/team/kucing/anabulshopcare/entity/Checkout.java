@@ -62,6 +62,7 @@ public class Checkout {
 
     public CheckoutResponse convertToResponse(){
         return CheckoutResponse.builder()
+                .id(this.id)
                 .cart(this.cart.stream().map(Cart::convertToResponse).collect(Collectors.toList()))
                 .shipmentAddress(this.shipmentAddress)
                 .couponCode(this.couponCode)

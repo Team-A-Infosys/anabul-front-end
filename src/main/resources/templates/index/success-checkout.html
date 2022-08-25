@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/landing-layout}"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}" />
+
+    <link rel="stylesheet" th:href="@{/css/signup/owl.carousel.min.css}" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/signup/bootstrap.min.css}" />
+
+    <!-- Style -->
+    <link rel="stylesheet" th:href="@{/css/signup/style.css}" />
+    <title>Login</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="container my-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12">
+                <div class="form-block mx-auto text-center">
+                    <div class="text-center mb-5">
+                        <h3 class="text-uppercase">
+                           <strong>Anabul Shop & Care</strong>
+                        </h3>
+                    </div>
+                    Congrats!!! You are success checkout the product. Go try paid the product, and confirm the payment <a class="btn btn-primary btn-sm" th:href="@{/checkout/list}">Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/js/signup/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/js/signup/popper.min.js}"></script>
+<script th:src="@{/js/signup/bootstrap.min.js}"></script>
+<script th:src="@{js/signup/main.js}"></script>
+</body>
+</html>

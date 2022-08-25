@@ -14,19 +14,19 @@
 <body>
 
 <div layout:fragment="content">
-<!-- breadcrumb -->
-<div class="container">
-  <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-    <a th:href="@{/}" class="stext-109 cl8 hov-cl1 trans-04">
-      Home
-      <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-    </a>
+  <!-- breadcrumb -->
+  <div class="container">
+    <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+      <a th:href="@{/}" class="stext-109 cl8 hov-cl1 trans-04">
+        Home
+        <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+      </a>
 
-    <span class="stext-109 cl4">
+      <span class="stext-109 cl4">
 				User Profile
 			</span>
+    </div>
   </div>
-</div>
 
   <!-- History Cart -->
   <form class="bg0 p-t-75 p-b-85">
@@ -34,16 +34,16 @@
       <div class="row m-lr-auto">
         <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50 text-center">
           <div class="m-l-25 m-r--38 m-lr-0-xl">
-              <img th:src="@{{imageUrl}(imageUrl=${userApp.avatars})}" class="w-10" alt="IMG">
-            </div>
+            <img th:src="@{{imageUrl}(imageUrl=${userApp.avatars})}" class="w-10" alt="IMG">
           </div>
+        </div>
       </div>
       <div class="row m-lr-auto">
         <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
           <div class="m-l-25 m-r--38 m-lr-0-xl">
-               <span class="h5">First Name : <span th:text="${userApp.firstName}"></span></span>
-            </div>
+            <span class="h5">First Name : <span th:text="${userApp.firstName}"></span></span>
           </div>
+        </div>
       </div>
       <div class="row m-lr-auto">
         <div class="col-lg-10 col-xl-7 m-lr-auto mb-3 text-center">
@@ -87,27 +87,25 @@
             <div class="wrap-table-shopping-cart">
               <table class="table-shopping-cart mt-3">
                 <tr class="table_head">
-                  <th class="column-1">Product</th>
+                  <th class="column-1">Checkout ID</th>
                   <th class="column-2"></th>
-                  <th class="column-3">Price</th>
-                  <th class="column-4">Quantity</th>
-                  <th class="column-5">Total</th>
+                  <th class="column-1">Details</th>
+                  <th class="column-1">Shipment Address</th>
+                  <th class="column-1">Courier</th>
+                  <th class="column-1">Total</th>
                 </tr>
 
-                <tr class="table_row" th:each="cart : ${userApp.getCartList()}">
-                  <td class="column-1">
-                    <div class="how-itemcart1">
-                      <img th:src="@{{imageUrl}(imageUrl=${cart.imageProduct})}" alt="IMG">
-                    </div>
-                  </td>
-                  <td class="column-2" th:text="${cart.productName}"></td>
-                  <td class="column-3"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.price,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
-                  <td class="column-4 text-center" th:text="${cart.quantity}"></td>
-                  <td class="column-5"> <span>Rp. <span th:text="${#numbers.formatDecimal(cart.subTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
+                <tr class="table_row" th:each="checkout : ${userApp.getHistory()}">
+                  <td class="column-1" th:text="${checkout.id}"></td>
+                  <td class="column-2"></td>
+                  <td class="column-1"><a th:href="@{/checkout/details/{id}(id=${checkout.id})}">Details</a></td>
+                  <td class="column-1" th:text="${checkout.shipmentAddress}"></td>
+                  <td class="column-1" th:text="${checkout.courier}"></td>
+                  <td class="column-1"> <span>Rp. <span th:text="${#numbers.formatDecimal(checkout.checkoutTotal,  0, 'COMMA', 0, 'POINT')}"></span></span></td>
                 </tr>
               </table>
             </div>
-           </div>
+          </div>
         </div>
       </div>
     </div>

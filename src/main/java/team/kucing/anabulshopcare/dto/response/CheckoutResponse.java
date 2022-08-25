@@ -3,6 +3,7 @@ package team.kucing.anabulshopcare.dto.response;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -11,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class CheckoutResponse {
+
+    private UUID id;
 
     private List<CartResponse> cart;
 

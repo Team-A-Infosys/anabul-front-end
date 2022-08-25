@@ -2,15 +2,12 @@ package team.kucing.anabulshopcare.service.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import team.kucing.anabulshopcare.dto.request.ShipmentRequest;
 import team.kucing.anabulshopcare.dto.response.ShipmentResponse;
 import team.kucing.anabulshopcare.entity.Shipment;
 import team.kucing.anabulshopcare.entity.subaddress.Provinsi;
 import team.kucing.anabulshopcare.exception.ResourceNotFoundException;
-import team.kucing.anabulshopcare.handler.ResponseHandler;
 import team.kucing.anabulshopcare.repository.ShipmentRepository;
 import team.kucing.anabulshopcare.repository.subrepo.ProvinsiRepository;
 import team.kucing.anabulshopcare.service.ShipmentService;
@@ -33,6 +30,11 @@ public class ShipmentServiceImpl implements ShipmentService {
     public List<Shipment> findAllShipping() {
         log.info("success get All shipments");
         return this.shipmentRepo.findAll();
+    }
+
+    @Override
+    public Shipment findShipmentPriceByProvinsi(Provinsi provinsi){
+        return this.shipmentRepo.findByProvinsi(provinsi);
     }
 
     @Override
